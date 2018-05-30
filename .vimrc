@@ -8,3 +8,7 @@ colorscheme gruvbox
 set background=dark
 autocmd vimenter * NERDTree
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+set autoindent
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
