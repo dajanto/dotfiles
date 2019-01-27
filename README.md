@@ -1,6 +1,2 @@
 # dotfiles
-vim
-	-pathogen
-	-nerdtree
-	-ctrlp
-	-gruvbox	
+vanilla vim
