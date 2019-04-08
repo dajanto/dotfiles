@@ -6,6 +6,8 @@ syntax enable
 set fileencoding=utf-8
 :set number
 set autoindent
+set spell
+set spelllang=de
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
