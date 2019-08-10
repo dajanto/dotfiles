@@ -1,7 +1,6 @@
 set encoding=utf-8
 set background=dark
-set t_Co=256
-colorscheme monokai
+colorscheme solarized8
 syntax enable
 set fileencoding=utf-8
 :set number
