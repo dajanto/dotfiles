@@ -14,3 +14,8 @@ set relativenumber
 set hlsearch
 map <f5> :mksession! session.vim
 map <f6> :source session.vim
+
+let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
+func! SaveFile(timer)
+  silent! :w!
+endfunc
