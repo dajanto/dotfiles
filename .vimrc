@@ -36,7 +36,7 @@ map <F7> /
 map <F8> :noh<ENTER>
 
 " TODO list done command
-map <F4> A *********--> X <-- ****ERLEDIGT!*****<ESC>j^
+map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
 " Autosaving with vim 8.0
 let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
