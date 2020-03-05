@@ -24,10 +24,19 @@ set fileencoding=utf-8
 colorscheme solarized8
 
 " Saving current state as session with F5
-map <f5> :mksession! session.vim
+map <F5> :mksession! session.vim<ENTER>
 
 " Load last session with F6
-map <f6> :source session.vim
+map <F6> :source session.vim<ENTER>
+
+" Search
+map <F7> /
+
+" Dehighlight search results
+map <F8> :noh<ENTER>
+
+" TODO list done command
+map <F4> A *********--> X <-- ****ERLEDIGT!*****<ESC>j^
 
 " Autosaving with vim 8.0
 let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
