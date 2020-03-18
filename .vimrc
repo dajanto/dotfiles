@@ -5,7 +5,11 @@
 "(_)  \_/  |_||_| |_| |_||_|    \___|
 " by dajanto
 
-" Standard stuff
+
+
+"-----------------------------------------
+" STANDARD STUFF
+
 syntax enable
 set encoding=utf-8
 set background=dark
@@ -16,24 +20,44 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set relativenumber
-set hlsearch
 set fileencoding=utf-8
-:set number
+set number
 
 " Current colorscheme
 colorscheme solarized8
+"-----------------------------------------
 
-" Saving current state as session with F5
-map <F5> :mksession! session.vim<ENTER>
 
-" Load last session with F6
-map <F6> :source session.vim<ENTER>
 
-" Search
+"-----------------------------------------
+" SEARCH
+
+set hlsearch
+set incsearch
+
+" Search shortcut
 map <F7> /
 
 " Dehighlight search results
 map <F8> :noh<ENTER>
+"-----------------------------------------
+
+
+
+"-----------------------------------------
+" SESSION
+
+" Saving current session with F5
+map <F5> :mksession! session.vim<ENTER>
+
+" Load last session with F6
+map <F6> :source session.vim<ENTER>
+"-----------------------------------------
+
+
+
+"-----------------------------------------
+" MISC
 
 " TODO list done command
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
@@ -43,3 +67,15 @@ let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
 func! SaveFile(timer)
   silent! :w!
 endfunc
+"-----------------------------------------
+
+
+
+"-----------------------------------------
+" GVIM SPECIFICS
+
+" Font
+if has("gui_running") 
+	set guifont=Ubuntu_Mono:h12
+endif
+"-----------------------------------------
