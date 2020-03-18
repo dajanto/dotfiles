@@ -62,7 +62,7 @@ map <F6> :source session.vim<ENTER>
 " TODO list done command
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
-" Autosaving with vim 8.0
+" Autosaving with VIM 8.0
 let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
 func! SaveFile(timer)
   silent! :w!
