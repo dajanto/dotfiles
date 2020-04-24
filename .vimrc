@@ -14,6 +14,7 @@ syntax enable
 set encoding=utf-8
 set background=dark
 set autoindent
+set autoread
 set spell
 set spelllang=de
 set noexpandtab
@@ -63,10 +64,10 @@ map <F6> :source session.vim<ENTER>
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
 " Autosaving with VIM 8.0
-let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
-func! SaveFile(timer)
-  silent! :w!
-endfunc
+" let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
+" func! SaveFile(timer)
+"   silent! :w!
+" endfunc
 "-----------------------------------------
 
 
