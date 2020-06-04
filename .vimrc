@@ -38,6 +38,16 @@ map <F7> /
 
 " Dehighlight search results
 map <F8> :noh<ENTER>
+
+" Global Search
+map <F9> :g/
+
+" Substitute anywhere
+map <F10> :%s/
+
+" Substitute in row
+map <F11> :s/
+
 "-----------------------------------------
 
 
