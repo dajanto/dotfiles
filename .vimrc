@@ -64,8 +64,8 @@ map <F6> :source session.vim<ENTER>
 
 "-----------------------------------------
 " MISC
-
-" TODO list done command
+map <F2> :set spell<ENTER>
+map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
 " Autosaving with VIM 8.0
