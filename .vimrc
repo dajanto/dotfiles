@@ -1,12 +1,11 @@
-"		    _                        
+		    _                        
 "   __   __(_) _ __ ___   _ __   ___ 
 "   \ \ / /| || '_ ` _ \ | '__| / __|
 " _  \ V / | || | | | | || |   | (__ 
 "(_)  \_/  |_||_| |_| |_||_|    \___|
 " by dajanto
 
-"-----------------------------------------
-" STANDARD STUFF
+" STANDARD STUFF {{{
 
 syntax enable
 set encoding=utf-8
@@ -24,12 +23,15 @@ set number
 
 " Current colorscheme
 colorscheme solarized8
-"-----------------------------------------
+
+" }}}
 
 
-"-----------------------------------------
-" SEARCH
+" SEARCH AND FIND {{{
 
+set wildmenu
+set hidden
+set path+=**
 set hlsearch
 set incsearch
 
@@ -48,22 +50,22 @@ map <F10> :%s/
 " Substitute in row
 map <F11> :s/
 
-"-----------------------------------------
+" }}}
 
 
-"-----------------------------------------
-" SESSION
+" SESSION {{{
 
 " Saving current session with F5
 map <F5> :mksession! session.vim<ENTER>
 
 " Load last session with F6
 map <F6> :source session.vim<ENTER>
-"-----------------------------------------
+
+" }}}
 
 
-"-----------------------------------------
-" MISC
+" MISC {{{
+
 map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
@@ -73,14 +75,15 @@ map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 " func! SaveFile(timer)
 "   silent! :w!
 " endfunc
-"-----------------------------------------
+
+" }}}
 
 
-"-----------------------------------------
-" GVIM SPECIFICS
+" GVIM SPECIFICS {{{
 
 " Font
 if has("gui_running") 
 	set guifont=Ubuntu_Mono:h12
 endif
-"-----------------------------------------
+
+" }}}
