@@ -66,6 +66,7 @@ map <F6> :source session.vim<ENTER>
 
 " MISC {{{
 
+map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>
 map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
@@ -83,7 +84,7 @@ map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
 " Font
 if has("gui_running") 
-	set guifont=Ubuntu_Mono:h12
+	set guifont=Ubuntu_Mono:h16
 endif
 
 " }}}
