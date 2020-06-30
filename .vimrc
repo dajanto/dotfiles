@@ -66,7 +66,7 @@ map <F6> :source session.vim<ENTER>
 
 " MISC {{{
 
-map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>
+map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:noh<ENTER>gg
 map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
