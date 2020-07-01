@@ -13,7 +13,7 @@ set background=dark
 set autoindent
 set autoread
 set spell
-set spelllang=de
+set spelllang=de_de,en_us
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
