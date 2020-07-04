@@ -71,8 +71,8 @@ map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
+" vim-plug
 call plug#begin()
-Plug 'lervag/vimtex'
 call plug#end()
 
 " Autosaving with VIM 8.0
