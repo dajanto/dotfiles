@@ -71,6 +71,9 @@ map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
+" Compiling current file with pdflatex
+map <F12> :silent! !(pdflatex %:t & xreader %:r.pdf & disown)<ENTER> <bar> :redraw!
+
 " vim-plug
 call plug#begin()
 call plug#end()
