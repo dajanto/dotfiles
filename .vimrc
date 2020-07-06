@@ -72,7 +72,7 @@ map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
 " Compiling current file with pdflatex
-map <F12> :silent! !(pdflatex %:t & xreader %:r.pdf & disown)<ENTER> <bar> :redraw!
+map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
 
 " vim-plug
 call plug#begin()
