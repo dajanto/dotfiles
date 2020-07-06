@@ -91,7 +91,7 @@ call plug#end()
 
 " Font
 if has("gui_running") 
-	set guifont=Ubuntu_Mono:h16
+	set guifont=Ubuntu_Mono:h18
 endif
 
 " }}}
