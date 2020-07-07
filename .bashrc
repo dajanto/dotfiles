@@ -93,6 +93,7 @@ alias ll='ls -lah'
 alias la='ls -lah'
 
 alias c='clear'
+alias fortune='fortune | cowsay | lolcat'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

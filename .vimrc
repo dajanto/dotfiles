@@ -11,6 +11,7 @@ syntax enable
 set encoding=utf-8
 set background=dark
 set autoindent
+set smartindent
 set autoread
 set spell
 set spelllang=de_de,en_us
