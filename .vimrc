@@ -76,8 +76,8 @@ map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
 
 " vim-plug
-call plug#begin()
-call plug#end()
+" call plug#begin()
+" call plug#end()
 
 " Autosaving with VIM 8.0
 " let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
