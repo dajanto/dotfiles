@@ -1,2 +1,2 @@
 # dotfiles
-vanilla vim
+My VIM and BASH dotfiles. 
