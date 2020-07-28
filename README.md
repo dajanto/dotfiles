@@ -1,2 +1,2 @@
 # dotfiles
-My VIM and BASH dotfiles. 
+All of my configuration files.
