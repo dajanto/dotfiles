@@ -57,20 +57,28 @@ map <F11> :s/
 " SESSION {{{
 
 " Saving current session with F5
-map <F5> :mksession! session.vim<ENTER>
+" map <F5> :mksession! session.vim<ENTER>
 
 " Load last session with F6
-map <F6> :source session.vim<ENTER>
+" map <F6> :source session.vim<ENTER>
 
 " }}}
 
 
 " MISC {{{
 
+" Get all files names in buffer
 map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:noh<ENTER>gg
+
+" Spelling
 map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
+
+" Todo list lien finish command
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
+
+" Insert current time and date
+:nnoremap <F5> "=strftime("%c")<CR>P
 
 " Compiling current file with pdflatex
 map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
