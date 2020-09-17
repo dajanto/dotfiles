@@ -6,7 +6,7 @@
 " by dajanto
 
 
-" STANDARD STUFF 
+" Basic Stuff
 
 syntax enable
 set encoding=utf-8
@@ -16,6 +16,11 @@ set smartindent
 set ignorecase
 set smartcase
 set autoread
+set nobackup 
+set nowritebackup 
+set noswapfile
+set noerrorbells 
+set novisualbell
 set spell
 set spelllang=de_de,en_us
 set noexpandtab
@@ -25,11 +30,19 @@ set relativenumber
 set fileencoding=utf-8
 set number
 
-" Current colorscheme
+" Undo related settings 
+" TODO win64 vs. linux	 
+set undofile                " Save undos after file closes
+set undodir=$HOME/.vim/undo " where to save undo histories
+set undolevels=1000         " How many undos
+set undoreload=10000        " number of lines to save for undo
+
+
+" Color
 colorscheme solarized8
 
 
-" SEARCH AND FIND 
+" Search and find 
 
 set wildmenu
 set hidden
@@ -43,7 +56,7 @@ map <F7> /
 " Dehighlight search results
 map <F8> :noh<ENTER>
 
-" Global Search
+" Global search
 map <F9> :g/
 
 " Substitute anywhere
@@ -53,7 +66,7 @@ map <F10> :%s/
 map <F11> :s/
 
 
-" SESSION 
+" Session
 
 " Saving current session with F5
 " map <F5> :mksession! session.vim<ENTER>
@@ -62,7 +75,7 @@ map <F11> :s/
 " map <F6> :source session.vim<ENTER>
 
 
-" MISC 
+" Misc
 
 " Get all files names in buffer
 map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:noh<ENTER>gg
@@ -72,13 +85,17 @@ map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 
 " Todo list line finish command
-map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
+map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 
 " Insert current time and date
 :nnoremap <F5> "=strftime("%c")<CR>P
 
 " Compiling current file with pdflatex
 map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
+
+" More useful tab navigation
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 
 " vim-plug
@@ -92,7 +109,7 @@ map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redr
 " endfunc
 
 
-" GVIM SPECIFICS
+" GVIM specifics
 
 " Font
 if has("gui_running") 
