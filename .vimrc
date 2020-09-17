@@ -5,7 +5,8 @@
 "(_)  \_/  |_||_| |_| |_||_|    \___|
 " by dajanto
 
-" STANDARD STUFF {{{
+
+" STANDARD STUFF 
 
 syntax enable
 set encoding=utf-8
@@ -27,10 +28,8 @@ set number
 " Current colorscheme
 colorscheme solarized8
 
-" }}}
 
-
-" SEARCH AND FIND {{{
+" SEARCH AND FIND 
 
 set wildmenu
 set hidden
@@ -53,10 +52,8 @@ map <F10> :%s/
 " Substitute in row
 map <F11> :s/
 
-" }}}
 
-
-" SESSION {{{
+" SESSION 
 
 " Saving current session with F5
 " map <F5> :mksession! session.vim<ENTER>
@@ -64,10 +61,8 @@ map <F11> :s/
 " Load last session with F6
 " map <F6> :source session.vim<ENTER>
 
-" }}}
 
-
-" MISC {{{
+" MISC 
 
 " Get all files names in buffer
 map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:noh<ENTER>gg
@@ -76,7 +71,7 @@ map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:noh<ENTER>gg
 map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 
-" Todo list lien finish command
+" Todo list line finish command
 map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
 " Insert current time and date
@@ -84,6 +79,7 @@ map <F4> A **********--> X <-- *****ERLEDIGT!*****<ESC>j^
 
 " Compiling current file with pdflatex
 map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
+
 
 " vim-plug
 " call plug#begin()
@@ -95,14 +91,10 @@ map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redr
 "   silent! :w!
 " endfunc
 
-" }}}
 
-
-" GVIM SPECIFICS {{{
+" GVIM SPECIFICS
 
 " Font
 if has("gui_running") 
 	set guifont=Ubuntu_Mono:h18
 endif
-
-" }}}
