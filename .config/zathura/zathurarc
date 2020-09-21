@@ -1,6 +1,6 @@
 set selection-clipboard clipboard
 set font "monospace normal 11"
+set incremental-search true
 
 # set highlight-color
 # set highlight-active-color
-# set incremental-search true
