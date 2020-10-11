@@ -105,8 +105,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 		endif
 
 call plug#begin()
-Plug 'moll/vim-node'				" Node Vim 			
-Plug 'leafgarland/typescript-vim'	" TypeScript Vim  
+Plug 'kien/ctrlp.vim'				" Searching 
 Plug 'vim-airline/vim-airline'		" Status Bar
 call plug#end()
 
