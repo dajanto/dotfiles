@@ -105,7 +105,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 		endif
 
 call plug#begin()
-Plug 'mg979/vim-visual-multi' 		" Multi Line Editing
 Plug 'moll/vim-node'				" Node Vim 			
 Plug 'leafgarland/typescript-vim'	" TypeScript Vim  
 Plug 'vim-airline/vim-airline'		" Status Bar
