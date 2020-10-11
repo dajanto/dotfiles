@@ -37,12 +37,6 @@ set undodir=$HOME/.vim/undo " where to save undo histories
 set undolevels=1000         " How many undos
 set undoreload=10000        " number of lines to save for undo
 
-
-" Color
-" colorscheme solarized8
-colorscheme gruvbox
-
-
 " Search and find 
 
 set wildmenu
@@ -111,6 +105,12 @@ Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'lifepillar/vim-solarized8'	" Colorscheme solarized8 
 Plug 'morhetz/gruvbox'				" Colorscheme gruvbox
 call plug#end()
+
+
+" Color
+" colorscheme solarized8
+colorscheme gruvbox
+
 
 " Autosaving with VIM 8.0
 " let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
