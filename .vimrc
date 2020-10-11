@@ -97,10 +97,19 @@ map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redr
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 
+" Install vim-plug if not found
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+		endif
 
-" vim-plug
-" call plug#begin()
-" call plug#end()
+call plug#begin()
+Plug 'mg979/vim-visual-multi' 		" Multi Line Editing
+Plug 'moll/vim-node'				" Node Vim 			
+Plug 'leafgarland/typescript-vim'	" TypeScript Vim  
+Plug 'vim-airline/vim-airline'		" Status Bar
+call plug#end()
 
 " Autosaving with VIM 8.0
 " let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
