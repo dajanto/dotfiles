@@ -39,7 +39,8 @@ set undoreload=10000        " number of lines to save for undo
 
 
 " Color
-colorscheme solarized8
+" colorscheme solarized8
+colorscheme gruvbox
 
 
 " Search and find 
@@ -107,6 +108,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 call plug#begin()
 Plug 'kien/ctrlp.vim'				" Searching 
 Plug 'vim-airline/vim-airline'		" Status Bar
+Plug 'lifepillar/vim-solarized8'	" Colorscheme solarized8 
+Plug 'morhetz/gruvbox'				" Colorscheme gruvbox
 call plug#end()
 
 " Autosaving with VIM 8.0
