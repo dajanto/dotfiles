@@ -102,6 +102,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 call plug#begin()
 Plug 'kien/ctrlp.vim'				" Searching 
 Plug 'vim-airline/vim-airline'		" Status Bar
+Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'lifepillar/vim-solarized8'	" Colorscheme solarized8 
 Plug 'morhetz/gruvbox'				" Colorscheme gruvbox
 call plug#end()
