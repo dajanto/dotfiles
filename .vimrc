@@ -27,6 +27,7 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set relativenumber
+" set cursorline
 set fileencoding=utf-8
 set number
 
@@ -47,6 +48,8 @@ set incsearch
 
 " Search shortcut
 map <F7> /
+map <space> /		" Forward
+map <C-space> ?		" Backward
 
 " Dehighlight search results
 map <F8> :noh<ENTER>
