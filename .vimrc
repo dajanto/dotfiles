@@ -48,8 +48,8 @@ set incsearch
 
 " Search shortcut
 map <F7> /
-map <space> /		" Forward
-map <C-space> ?		" Backward
+map <space> /
+map <C-space> ?
 
 " Dehighlight search results
 map <F8> :noh<ENTER>
