@@ -128,5 +128,6 @@ colorscheme gruvbox
 
 " Font
 if has("gui_running") 
-	set guifont=Ubuntu_Mono:h18
+	" set guifont=Ubuntu_Mono:h18
+	set guifont=Droid_Sans_Mono:h12
 endif
