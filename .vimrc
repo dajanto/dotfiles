@@ -7,7 +7,6 @@
 
 
 " Basic Stuff
-
 syntax enable
 set encoding=utf-8
 set background=dark
@@ -32,14 +31,16 @@ set fileencoding=utf-8
 set number
 
 " Undo related settings 
-" TODO win64 vs. linux	 
+
+" If undo directory doesn't exist, create it
+silent !mkdir ~/.vim/undo > /dev/null 2>&1
+
 set undofile                " Save undos after file closes
-set undodir=$HOME/.vim/undo " where to save undo histories
+set undodir=$HOME/.vim/undo " Where to save undo histories
 set undolevels=1000         " How many undos
-set undoreload=10000        " number of lines to save for undo
+set undoreload=10000        " Number of lines to save for undo
 
 " Search and find 
-
 set wildmenu
 set hidden
 set path+=**
@@ -49,7 +50,6 @@ set incsearch
 " Search shortcut
 map <F7> /
 map <space> /
-map <C-space> ?
 
 " Dehighlight search results
 map <F8> :noh<ENTER>
