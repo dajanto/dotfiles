@@ -76,6 +76,7 @@ map <F11> :s/
 " Misc
 
 " Get all files names in buffer
+" TODO recursive?
 map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:noh<ENTER>gg
 
 " Spelling
@@ -94,6 +95,9 @@ map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redr
 " More useful tab navigation
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
+
+" Ctrl+C copying
+map <C-c> "+y
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
