@@ -5,6 +5,11 @@
 "(_)  \_/  |_||_| |_| |_||_|    \___|
 " by dajanto
 
+" Strange characters fix on Mint Thinkpad 
+if has("unix") 
+  let &t_TI = ""
+  let &t_TE = ""
+endif
 
 " Basic Stuff
 syntax enable
@@ -112,9 +117,8 @@ Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'lifepillar/vim-solarized8'	" Colorscheme solarized8 
 Plug 'morhetz/gruvbox'				" Colorscheme gruvbox
-Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
+" Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 call plug#end()
-
 
 " Color
 " colorscheme solarized8
@@ -132,6 +136,6 @@ colorscheme gruvbox
 
 " Font
 if has("gui_running") 
-	" set guifont=Ubuntu_Mono:h18
-	set guifont=Droid_Sans_Mono:h12
+  " set guifont=Ubuntu_Mono:h18
+  set guifont=Droid_Sans_Mono:h12
 endif
