@@ -38,8 +38,7 @@ set number
 " Undo related settings 
 
 " If undo directory doesn't exist, create it
-" TODO remove whitespace in terminal 
-silent !mkdir ~/.vim/undo > /dev/null 2>&1
+silent !mkdir ~/.vim/undo >/dev/null 2>&1
 
 set undofile                " Save undos after file closes
 set undodir=$HOME/.vim/undo " Where to save undo histories
