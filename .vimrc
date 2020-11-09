@@ -38,6 +38,7 @@ set number
 " Undo related settings 
 
 " If undo directory doesn't exist, create it
+" TODO whitespace in terminal / vim mkdir()?
 silent !mkdir ~/.vim/undo >/dev/null 2>&1
 
 set undofile                " Save undos after file closes
