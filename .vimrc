@@ -38,6 +38,7 @@ set number
 " Undo related settings 
 
 " If undo directory doesn't exist, create it
+" TODO remove whitespace in terminal 
 silent !mkdir ~/.vim/undo > /dev/null 2>&1
 
 set undofile                " Save undos after file closes
@@ -92,7 +93,7 @@ map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 
 " Insert current time and date
-:nnoremap <F5> "=strftime("%c")<CR>P
+nnoremap <F5> "=strftime("%c")<CR>P
 
 " Compiling current file with pdflatex
 map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
@@ -124,8 +125,7 @@ call plug#end()
 " colorscheme solarized8
 colorscheme gruvbox
 
-
-" Autosaving with VIM 8.0
+" Autosaving (since Vim 8) 
 " let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
 " func! SaveFile(timer)
 "   silent! :w!
