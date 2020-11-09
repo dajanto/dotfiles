@@ -82,7 +82,6 @@ map <F11> :s/
 " Misc
 
 " Get all files names in buffer
-" TODO recursive?
 map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:noh<ENTER>gg
 
 " Spelling
@@ -96,6 +95,7 @@ map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 nnoremap <F5> "=strftime("%c")<CR>P
 
 " Compiling current file with pdflatex
+" TODO recursive?
 map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
 
 " More useful tab navigation
