@@ -94,9 +94,9 @@ map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 " Insert current time and date
 nnoremap <F5> "=strftime("%c")<CR>P
 
-" Compiling current file with pdflatex
-" TODO recursive?
-map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
+" Compiling current file with pdflatex silently
+" map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
+au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
 
 " More useful tab navigation
 nnoremap <C-Left> :tabprevious<CR>
