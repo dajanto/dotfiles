@@ -31,7 +31,7 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set relativenumber
-" set cursorline
+set cursorline
 set fileencoding=utf-8
 set number
 
