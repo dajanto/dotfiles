@@ -105,6 +105,9 @@ nnoremap <C-Right> :tabnext<CR>
 " Ctrl+C copying
 map <C-c> "+y
 
+" Forward-Search word under cursor
+map # *N
+
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
