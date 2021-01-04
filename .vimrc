@@ -36,11 +36,9 @@ set fileencoding=utf-8
 set number
 
 " Undo related settings 
-
 " If undo directory doesn't exist, create it
 " TODO whitespace in terminal / vim mkdir()?
 silent !mkdir ~/.vim/undo >/dev/null 2>&1
-
 set undofile                " Save undos after file closes
 set undodir=$HOME/.vim/undo " Where to save undo histories
 set undolevels=1000         " How many undos
@@ -94,16 +92,12 @@ map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 " Insert current time and date
 nnoremap <F5> "=strftime("%c")<CR>P
 
-<<<<<<< HEAD
-" Copy whole document in + register 
-=======
 " Copy whole document in + register
->>>>>>> bf0c64794177ed4140ccb7a892a57deb55c6f9c2
 map <F6> ggVG"+y
 
 " Compiling current file with pdflatex silently
-" map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
-au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
+map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
+" au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
 
 " More useful tab navigation
 nnoremap <C-Left> :tabprevious<CR>
@@ -112,13 +106,11 @@ nnoremap <C-Right> :tabnext<CR>
 " Ctrl+C copying
 map <C-c> "+y
 
-<<<<<<< HEAD
 " Remembering old yank after paste
 vnoremap p "_dP
-=======
+
 " Forward-Search word under cursor
 map # *N
->>>>>>> bf0c64794177ed4140ccb7a892a57deb55c6f9c2
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -145,7 +137,6 @@ colorscheme gruvbox
 " func! SaveFile(timer)
 "   silent! :w!
 " endfunc
-
 
 " GVIM specifics
 
