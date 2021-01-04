@@ -7,8 +7,8 @@
 
 " Strange characters fix on Mint Thinkpad 
 if has("unix") 
-  let &t_TI = ""
-  let &t_TE = ""
+	let &t_TI = ""
+	let &t_TE = ""
 endif
 
 " Basic Stuff
@@ -94,6 +94,9 @@ map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 " Insert current time and date
 nnoremap <F5> "=strftime("%c")<CR>P
 
+" Copy whole document in + register 
+map <F6> ggVG"+y
+
 " Compiling current file with pdflatex silently
 " map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
 au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
@@ -105,12 +108,15 @@ nnoremap <C-Right> :tabnext<CR>
 " Ctrl+C copying
 map <C-c> "+y
 
+" Remembering old yank after paste
+vnoremap p "_dP
+
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-      \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-		endif
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin()
 Plug 'kien/ctrlp.vim'				" Searching 
@@ -136,6 +142,6 @@ colorscheme gruvbox
 
 " Font
 if has("gui_running") 
-  " set guifont=Ubuntu_Mono:h18
-  set guifont=Droid_Sans_Mono:h12
+	" set guifont=Ubuntu_Mono:h18
+	set guifont=Droid_Sans_Mono:h12
 endif
