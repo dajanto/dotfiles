@@ -94,7 +94,11 @@ map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 " Insert current time and date
 nnoremap <F5> "=strftime("%c")<CR>P
 
+<<<<<<< HEAD
 " Copy whole document in + register 
+=======
+" Copy whole document in + register
+>>>>>>> bf0c64794177ed4140ccb7a892a57deb55c6f9c2
 map <F6> ggVG"+y
 
 " Compiling current file with pdflatex silently
@@ -108,8 +112,13 @@ nnoremap <C-Right> :tabnext<CR>
 " Ctrl+C copying
 map <C-c> "+y
 
+<<<<<<< HEAD
 " Remembering old yank after paste
 vnoremap p "_dP
+=======
+" Forward-Search word under cursor
+map # *N
+>>>>>>> bf0c64794177ed4140ccb7a892a57deb55c6f9c2
 
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
