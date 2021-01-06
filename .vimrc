@@ -109,6 +109,9 @@ map <C-c> "+y
 " Remembering old yank after paste
 vnoremap p "_dP
 
+" Stop vim from auto commenting on o or O 
+set formatoptions-=o
+
 " Forward-Search word under cursor
 map # *N
 
