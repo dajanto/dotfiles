@@ -52,20 +52,10 @@ set hlsearch
 set incsearch
 
 " Search shortcut
-map <F7> /
 map <space> /
 
 " Dehighlight search results
 map <F8> :noh<ENTER>
-
-" Global search
-map <F9> :g/
-
-" Substitute anywhere
-map <F10> :%s/
-
-" Substitute in row
-map <F11> :s/
 
 
 " Session
@@ -87,13 +77,25 @@ map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 
 " Todo list line finish command
-map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
+" map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
+"
+" Resizing -
+map <F4> :resize -10
 
 " Insert current time and date
-nnoremap <F5> "=strftime("%c")<CR>P
+" nnoremap <F5> "=strftime("%c")<CR>P
+
+" Resizing +
+map <F5> :resize +10
 
 " Copy whole document in + register
 map <F6> ggVG"+y
+
+" Resizing vertically -
+map <F9> :vertical resize -10
+
+" Resizing vertically +
+map <F10> :vertical resize +10
 
 " Compiling current file with pdflatex silently
 map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
@@ -107,7 +109,7 @@ nnoremap <C-Right> :tabnext<CR>
 map <C-c> "+y
 
 " Remembering old yank after paste
-vnoremap p "_dP
+" vnoremap p "_dP
 
 " Stop vim from auto commenting on o or O 
 set formatoptions-=o
