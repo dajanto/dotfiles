@@ -55,8 +55,7 @@ set incsearch
 map <space> /
 
 " Dehighlight search results
-map <F8> :noh<ENTER>
-
+map <F9> :nohlsearch<ENTER>
 
 " Session
 
@@ -70,7 +69,7 @@ map <F8> :noh<ENTER>
 " Misc
 
 " Get all files names in buffer
-map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:noh<ENTER>gg
+map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:nohlsearch<ENTER>gg
 
 " Spelling
 map <F2> :set spell<ENTER>
@@ -80,22 +79,25 @@ map <F3> :set nospell<ENTER>
 " map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 "
 " Resizing -
-map <F4> :resize -10
+map <F4> :resize -10<ENTER>
 
 " Insert current time and date
 " nnoremap <F5> "=strftime("%c")<CR>P
 
 " Resizing +
-map <F5> :resize +10
+map <F5> :resize +10<ENTER>
 
 " Copy whole document in + register
-map <F6> ggVG"+y
+" map <F6> ggVG"+y
 
 " Resizing vertically -
-map <F9> :vertical resize -10
+map <F6> :vertical resize -10<ENTER>
 
 " Resizing vertically +
-map <F10> :vertical resize +10
+map <F7> :vertical resize +10<ENTER>
+
+" TODO Resize all windows to default size
+" map <F8> <C-w>= 
 
 " Compiling current file with pdflatex silently
 map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
