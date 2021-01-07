@@ -110,7 +110,8 @@ nnoremap <C-Right> :tabnext<CR>
 " Ctrl+C copying
 map <C-c> "+y
 
-" Remembering old yank after paste
+" Remember old yank after paste
+" nnoremap p "0p
 " vnoremap p "_dP
 
 " Stop vim from auto commenting on o or O 
