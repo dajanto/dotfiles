@@ -121,3 +121,4 @@ fi
 
 # set -o vi
 
+fortune | cowsay
