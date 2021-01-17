@@ -37,8 +37,10 @@ set number
 
 " Undo related settings 
 " If undo directory doesn't exist, create it
-" TODO whitespace in terminal / vim mkdir()?
-silent !mkdir ~/.vim/undo >/dev/null 2>&1
+if empty(glob('~/.vim/undo'))
+	silent !mkdir ~/.vim/undo >/dev/null 2>&1
+endif
+
 set undofile                " Save undos after file closes
 set undodir=$HOME/.vim/undo " Where to save undo histories
 set undolevels=1000         " How many undos
