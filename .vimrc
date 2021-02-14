@@ -130,14 +130,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'kien/ctrlp.vim'				" Searching 
+" Plugins
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Finder
+Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'tpope/vim-surround'			" Vim Surround
-Plug 'lifepillar/vim-solarized8'	" Colorscheme solarized8 
-" Plug 'morhetz/gruvbox'			" Colorscheme gruvbox original
-Plug 'gruvbox-community/gruvbox'	" Colorscheme gruvbox community
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
 " Plug 'sheerun/vim-polyglot'		" Syntax Highlighting improvements and other stuff
+
+" Colorschemes
+Plug 'gruvbox-community/gruvbox'	
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " Color
