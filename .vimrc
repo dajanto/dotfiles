@@ -134,8 +134,10 @@ Plug 'kien/ctrlp.vim'				" Searching
 Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'lifepillar/vim-solarized8'	" Colorscheme solarized8 
-Plug 'morhetz/gruvbox'				" Colorscheme gruvbox
-" Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
+" Plug 'morhetz/gruvbox'			" Colorscheme gruvbox original
+Plug 'gruvbox-community/gruvbox'	" Colorscheme gruvbox community
+Plug 'junegunn/goyo.vim'			" Distraction-free typing
+" Plug 'sheerun/vim-polyglot'		" Syntax Highlighting improvements and other stuff
 call plug#end()
 
 " Color
