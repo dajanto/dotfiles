@@ -1,18 +1,20 @@
 # vim: filetype=i3config
 # This config file will use environment variables such as $BROWSER and $TERMINAL.
 
+# Set random background
 exec --no-startup-id feh --bg-fill --randomize ~/GitHub/wallpapers/Landscapes/*
 
+# Show i3status bar top
 bar {
 	position top
 	status_command i3status
-
 }
 
 # Swap ESC and CAPSLOCK
 exec_always --no-startup-id xmodmap -e "clear lock"
 exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
 exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
+
 
 # #---Basic Definitions---# #
 set $inner_gaps 12
@@ -26,8 +28,10 @@ set $lock i3lock
 set $suspend sudo systemctl suspend
 set $hibernate sudo -A systemctl hibernate
 
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+
 
 # #---Gaps---# #
 for_window [class="^.*"] border pixel 2
@@ -36,16 +40,18 @@ gaps outer $outer_gaps
 
 # #---Basic Bindings---# #
 bindsym $mod+Return 		         exec $term
-bindsym $mod+Shift+Return	       exec $term --working-directory  $(xcwd)
+
 
 bindsym $mod+Escape	             exec --no-startup-id dm-tool switch-to-greeter
 bindsym $mod+Shift+Escape	       exec --no-startup-id $hibernate
 
+
 # bindsym $mod+BackSpace
 # bindsym $mod+Shift+BackSpace	   exec --no-startup-id prompt "Reboot computer?" $reboot
 
+
 # space
-bindsym $mod+space 			            exec --no-startup-id rofi-menu 
+# bindsym $mod+space 			            exec --no-startup-id rofi-menu 
 
 
 # #---Letter Key Bindings---# #
@@ -60,17 +66,15 @@ bindsym $mod+c 			            exec --no-startup-id lock
 bindsym $mod+Shift+c		        exec --no-startup-id $suspend
 
 # e
-bindsym $mod+e 			            exec --no-startup-id code-insiders -n
-bindsym $mod+Shift+e		        exec $term -e code-insiders
-
+bindsym $mod+e 			        	exec $term -e caja
 
 # r
-bindsym $mod+r 			            exec $term -e caja
-bindsym $mod+Shift+r		        exec --no-startup-id winresize
+bindsym $mod+r 			            gaps outer current plus 5
+bindsym $mod+Shift+r	            gaps outer current minus 5
 
 # t
-bindsym $mod+t 			            exec $term -e ytop
-bindsym $mod+Shift+t            focus mode_toggle
+bindsym $mod+t					gaps inner current plus 5
+bindsym $mod+Shift+t			gaps inner current minus 5
 
 # y
 # bindsym $mod+y			            exec --no-startup-id flameshot gui -p ~/Pics/screenshots
@@ -80,7 +84,7 @@ bindsym $mod+Shift+t            focus mode_toggle
 bindsym $mod+u                  [urgent=latest] focus
 
 # i
-bindsym $mod+i                  fullscreen disable; floating enable; resize set 300 200; sticky enable; move position 4792 53
+# bindsym $mod+i                  fullscreen disable; floating enable; resize set 300 200; sticky enable; move position 4792 53
 
 # o
 bindsym $mod+o			            exec --no-startup-id $term -e nvim ~/Repos/blog/content
@@ -90,8 +94,8 @@ bindsym $mod+o			            exec --no-startup-id $term -e nvim ~/Repos/blog/con
 bindsym $mod+a		              exec $term -e alsamixer
 
 # s
-bindsym $mod+s        			    sticky toggle;
-bindsym $mod+Shift+s			      split toggle
+bindsym $mod+s        			    split toggle;
+bindsym $mod+Shift+s			      sticky toggle
 
 # d
 bindsym $mod+d                  exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -b -i'
@@ -124,18 +128,18 @@ bindsym $mod+l			            focus right
 bindsym $mod+Shift+l		        move right 30
 bindsym $mod+Ctrl+l		          move workspace to output right
 
-bindsym $mod+semicolon 			    exec --no-startup-id skippy-xd
+# bindsym $mod+semicolon 			    exec --no-startup-id skippy-xd
 
 # z
-bindsym $mod+z			            exec --no-startup-id $term -e nvim ~/.zshrc
+bindsym $mod+z			            gaps inner current set 15; gaps outer current set 15
 
 # x
 bindsym $mod+x 			            exec --no-startup-id $reboot
 bindsym $mod+Shift+x		        exec --no-startup-id $shutdown
 
 # p
-bindsym $mod+p			            exec --no-startup-id picom -b
-bindsym $mod+Shift+p		        exec --no-startup-id killall picom
+# bindsym $mod+p			            exec --no-startup-id picom -b
+# bindsym $mod+Shift+p		        exec --no-startup-id killall picom
 
 # v
 bindsym $mod+v			            exec --no-startup-id mpv /dev/video0
@@ -144,7 +148,7 @@ bindsym $mod+v			            exec --no-startup-id mpv /dev/video0
 bindsym $mod+b			            exec --no-startup-id feh --bg-fill --randomize ~/GitHub/wallpapers/Landscapes/*
 
 # n
-bindsym $mod+n			            exec --no-startup-id kill -s USR1 $(pidof deadd-notification-center)
+# bindsym $mod+n			            exec --no-startup-id kill -s USR1 $(pidof deadd-notification-center)
 
 # m
 bindsym $mod+m		              exec --no-startup-id spotify
@@ -171,11 +175,9 @@ set $ws9 "9"
 set $ws10 "10"
 
 # Assign Workspaces:
-assign [class="Brave"] $ws1
-assign [class="Chromium"] $ws2
+assign [class="Brave"] $ws2
 assign [class="discord"] $ws8
-for_window [class="Spotify"] move to workspace $ws9
-assign [class="obs"] $ws10
+for_window [class="Spotify"] move to workspace $ws4
 
 # Assing autofloat
 for_window [title=".*Emulator.*"] floating enable
