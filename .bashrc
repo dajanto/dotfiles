@@ -91,6 +91,7 @@ fi
 alias l='ls -lh'
 alias ll='ls -lah'
 alias la='ls -lah'
+alias aptapt='sudo apt update && sudo apt upgrade -y'
 
 alias c='clear'
 #alias fortune='fortune | cowsay | lolcat'
@@ -121,4 +122,4 @@ fi
 
 # set -o vi
 
-fortune | cowsay
+
