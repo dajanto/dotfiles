@@ -1,6 +1,8 @@
 # vim: filetype=i3config
 # This config file will use environment variables such as $BROWSER and $TERMINAL.
 
+exec --no-startup-id feh --bg-fill --randomize ~/GitHub/wallpapers/Landscapes/*
+
 bar {
 	position top
 	status_command i3status
@@ -13,8 +15,8 @@ exec_always --no-startup-id xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock
 exec_always --no-startup-id xmodmap -e "keycode 66 = Escape NoSymbol Escape"
 
 # #---Basic Definitions---# #
-set $inner_gaps 8
-set $outer_gaps 5
+set $inner_gaps 12
+set $outer_gaps 8
 set $term --no-startup-id gnome-terminal
 set $mod Mod4
 set $alt Mod1
@@ -71,8 +73,8 @@ bindsym $mod+t 			            exec $term -e ytop
 bindsym $mod+Shift+t            focus mode_toggle
 
 # y
-bindsym $mod+y			            exec --no-startup-id flameshot gui -p ~/Pics/screenshots
-bindsym $mod+Shift+y		        exec --no-startup-id flameshot full -p ~/Pics/screenshots
+# bindsym $mod+y			            exec --no-startup-id flameshot gui -p ~/Pics/screenshots
+# bindsym $mod+Shift+y		        exec --no-startup-id flameshot full -p ~/Pics/screenshots
 
 # u
 bindsym $mod+u                  [urgent=latest] focus
