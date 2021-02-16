@@ -2,13 +2,13 @@
 nm-applet --indicator &
 
 # Starting compositor
-picom -b
+# picom -b
 
 # Notification center
-deadd-notification-center &
+# deadd-notification-center &
 
 # Bluetooth
-blueman-applet &
+# blueman-applet &
 
 # Stop screen from going blank
 xset s off
@@ -19,13 +19,13 @@ xset s noblank
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Faster key repeat and delay
-xset r rate 100 75
+xset r rate 210 35
 
 # Hide Cursor when typing
-xbanish &
+# xbanish &
 
 # Open flameshot on startup
-flameshot &
+# flameshot &
 
 # Save your eyes
 #redshift & 
