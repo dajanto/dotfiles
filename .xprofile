@@ -19,7 +19,7 @@ xset s noblank
 export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Faster key repeat and delay
-xset r rate 210 35
+xset r rate 210 30
 
 # Hide Cursor when typing
 # xbanish &
