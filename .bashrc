@@ -128,4 +128,5 @@ fi
 
 # set -o vi
 
-
+# fortune | cowsay 
+fortune | cowsay | lolcat
