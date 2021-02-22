@@ -16,8 +16,8 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
+HISTSIZE=10000
+HISTFILESIZE=20000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -58,11 +58,12 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]🌲:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    # PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\] ' 
-    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\] ' 
+    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\w\[\033[00m\]\$  ' 
+    #PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\]\w/ ' 
 else
     # PS1='${debian_chroot:+($debian_chroot)}\u@\h🌲:\w\$ '
-    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\] '
+    #PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\]\w/ '
+    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\w\[\033[00m\]\$  ' 
 fi
 unset color_prompt force_color_prompt
 
@@ -70,7 +71,8 @@ unset color_prompt force_color_prompt
 case "$TERM" in
 xterm*|rxvt*)
     # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\] ' 
+    #PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\]\w/ ' 
+    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\w\[\033[00m\]\$  ' 
     ;;
 *)
     ;;
