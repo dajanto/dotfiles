@@ -122,6 +122,9 @@ set formatoptions-=o
 " Forward-Search word under cursor
 map # *N
 
+" Disable Ex-Mode
+nnoremap Q <Nop>
+
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
