@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO mkdir beforehand
+
 cp .vimrc /home/dajanto/
 cp .bashrc /home/dajanto/
 cp .Xresources /home/dajanto/

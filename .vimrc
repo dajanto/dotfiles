@@ -139,7 +139,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
-" Plug 'sheerun/vim-polyglot'		" Syntax Highlighting improvements and other stuff
+Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'	
