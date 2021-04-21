@@ -97,7 +97,10 @@ fi
 alias l='ls -lh'
 alias ll='ls -lah'
 alias la='ls -lah'
-alias aptapt='sudo apt update && sudo apt upgrade -y'
+alias aptapt='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
+alias sdsd='shutdown 0'
+alias vim='nvim'
+alias vim='\vim'
 
 alias c='clear'
 #alias fortune='fortune | cowsay | lolcat'
