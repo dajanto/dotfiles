@@ -18,6 +18,9 @@ xset r rate 210 35
 # Faster scrolling 
 imwheel &
 
+# Transparency
+compton &
+
 # Save your eyes
 # redshift & 
 # redshift-gtk & 
