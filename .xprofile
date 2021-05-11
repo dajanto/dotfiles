@@ -19,7 +19,7 @@ xset r rate 210 35
 imwheel &
 
 # Transparency
-compton &
+picom &
 
 # Save your eyes
 # redshift & 
