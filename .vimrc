@@ -165,4 +165,4 @@ if has("gui_running")
 endif
 
 " Compton Transparency
-autocmd VimEnter * hi Normal ctermbg=none
+" autocmd VimEnter * hi Normal ctermbg=none
