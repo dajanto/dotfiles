@@ -144,11 +144,13 @@ Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'	
 Plug 'lifepillar/vim-solarized8'
+Plug 'doums/darcula'
 call plug#end()
 
 " Color
-" colorscheme solarized8
-colorscheme gruvbox
+" colorscheme darcula
+" colorscheme gruvbox
+colorscheme solarized8
 
 " Autosaving (since Vim 8) 
 " let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
@@ -160,8 +162,13 @@ colorscheme gruvbox
 
 " Font
 if has("gui_running") 
+
 	" set guifont=Ubuntu_Mono:h18
 	set guifont=Droid_Sans_Mono:h12
+
+	" No bars
+	set guioptions -=m
+	set guioptions -=T
 endif
 
 " Compton Transparency
