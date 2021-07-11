@@ -78,7 +78,7 @@ map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:nohlsearch<ENTER>gg
 map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 
-" Todo list line finish command
+" TODO list line finish command
 " map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 "
 " Resizing -
@@ -109,9 +109,6 @@ map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redr
 " More useful tab navigation
 nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
-
-" Ctrl+C copying
-map <C-c> "+y
 
 " Remember old yank after paste
 " nnoremap p "0p
@@ -148,16 +145,12 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'doums/darcula'
 call plug#end()
 
+
 " Color
 colorscheme darcula
 " colorscheme gruvbox
 " colorscheme solarized8
 
-" Autosaving (since Vim 8) 
-" let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
-" func! SaveFile(timer)
-"   silent! :w!
-" endfunc
 
 " GVIM specifics
 
