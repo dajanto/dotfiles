@@ -18,6 +18,7 @@ set background=dark
 set autoindent
 set smartindent
 set ignorecase
+set termguicolors
 set smartcase
 set autoread
 set nobackup 
@@ -148,9 +149,9 @@ Plug 'doums/darcula'
 call plug#end()
 
 " Color
-" colorscheme darcula
+colorscheme darcula
 " colorscheme gruvbox
-colorscheme solarized8
+" colorscheme solarized8
 
 " Autosaving (since Vim 8) 
 " let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
