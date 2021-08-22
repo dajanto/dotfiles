@@ -103,7 +103,7 @@ map <F7> :vertical resize +10<ENTER>
 " map <F8> <C-w>= 
 
 " Compiling current file with pdflatex silently
-map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
+" map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
 " au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
 
 " More useful tab navigation

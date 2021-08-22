@@ -1,5 +1,8 @@
 #!/bin/bash
 
+printf "\n"
+echo Installing...
+
 config="/home/dajanto/.config/"
 
 printf "\n"
@@ -34,5 +37,5 @@ cp .imwheelrc /home/dajanto/
 echo ".imwheelrc [x]";
 
 printf "\n"
-echo ---Finished---
+echo Finished
 printf "\n"
