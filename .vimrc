@@ -60,14 +60,6 @@ map <space> /
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
 
-" Session
-
-" Saving current session with F5
-" map <F5> :mksession! session.vim<ENTER>
-
-" Load last session with F6
-" map <F6> :source session.vim<ENTER>
-
 
 " Misc
 
@@ -79,22 +71,14 @@ map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 
 " TODO list line finish command
-" map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
-"
+map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
+
 " Insert current time and date
 nnoremap <F5> "=strftime("%c")<CR>P
 
-" Compiling current file with pdflatex silently
-map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
+" TODO Compiling current file with pdflatex silently
+" map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
 " au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
-
-" More useful tab navigation
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
-
-" Remember old yank after paste
-" nnoremap p "0p
-" vnoremap p "_dP
 
 " Stop vim from auto commenting on o or O 
 set formatoptions-=o
