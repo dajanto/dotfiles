@@ -44,7 +44,7 @@ endif
 
 set undofile                " Save undos after file closes
 set undodir=$HOME/.vim/undo " Where to save undo histories
-set undolevels=1000         " How many undos
+set undolevels=10000        " How many undos
 set undoreload=10000        " Number of lines to save for undo
 
 " Search and find 
@@ -81,29 +81,11 @@ map <F3> :set nospell<ENTER>
 " TODO list line finish command
 " map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 "
-" Resizing -
-map <F4> :resize -10<ENTER>
-
 " Insert current time and date
-" nnoremap <F5> "=strftime("%c")<CR>P
-
-" Resizing +
-map <F5> :resize +10<ENTER>
-
-" Copy whole document in + register
-" map <F6> ggVG"+y
-
-" Resizing vertically -
-map <F6> :vertical resize -10<ENTER>
-
-" Resizing vertically +
-map <F7> :vertical resize +10<ENTER>
-
-" TODO Resize all windows to default size
-" map <F8> <C-w>= 
+nnoremap <F5> "=strftime("%c")<CR>P
 
 " Compiling current file with pdflatex silently
-" map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
+map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
 " au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
 
 " More useful tab navigation
@@ -147,8 +129,8 @@ call plug#end()
 
 
 " Color
-colorscheme darcula
-" colorscheme gruvbox
+" colorscheme darcula
+colorscheme gruvbox
 " colorscheme solarized8
 
 
