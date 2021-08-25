@@ -3,7 +3,7 @@
 printf "\n"
 echo Installing...
 
-config="/home/dajanto/.config/"
+config="~/.config/"
 
 printf "\n"
 
@@ -27,13 +27,13 @@ if test -d ${config}picom/
   else mkdir -p ${config}picom; cp .config/picom/picom.conf ${config}picom/; fi
 echo "picom [x]";
 
-cp .vimrc /home/dajanto/
+cp .vimrc ~
 echo ".vimrc [x]";
-cp .bashrc /home/dajanto/
+cp .bashrc ~
 echo ".bashrc [x]";
-cp .xprofile /home/dajanto/
+cp .xprofile ~
 echo ".xprofile [x]";
-cp .imwheelrc /home/dajanto/
+cp .imwheelrc ~
 echo ".imwheelrc [x]";
 
 printf "\n"
