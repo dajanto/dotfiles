@@ -100,6 +100,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Finder
 Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'tpope/vim-surround'			" Vim Surround
+Plug 'tpope/vim-fugitive'			" Git integration
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 
