@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO Insert README commands here
+
 printf "\n"
 echo Installing...
 
