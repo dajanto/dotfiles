@@ -35,6 +35,8 @@ cp .xprofile ~
 echo ".xprofile [x]";
 cp .imwheelrc ~
 echo ".imwheelrc [x]";
+cp .Xresources ~
+echo ".Xresources [x]";
 
 printf "\n"
 echo Finished
