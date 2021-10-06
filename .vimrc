@@ -74,6 +74,9 @@ nnoremap N Nzzzv
 " Center screen after line join
 nnoremap J mzJ`z
 
+" Multiple p inserts in a row
+xnoremap p "_dP
+
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
 
