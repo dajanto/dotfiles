@@ -36,7 +36,6 @@ set cursorline
 set fileencoding=utf-8
 set number
 
-" Undo related settings 
 " If undo directory doesn't exist, create it
 if empty(glob('~/.vim/undo'))
 	silent !mkdir ~/.vim/undo >/dev/null 2>&1
@@ -56,6 +55,24 @@ set incsearch
 
 " Search shortcut
 map <space> /
+
+" Forward-Search word under cursor
+map # *N
+
+" Disable Ex-Mode
+nnoremap Q <Nop>
+
+" End of line copy
+nnoremap Y yg_
+
+" Center screen after searching next
+nnoremap n nzzzv
+
+" Center screen after searching previous
+nnoremap N Nzzzv
+
+" Center screen after line join
+nnoremap J mzJ`z
 
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
@@ -81,18 +98,13 @@ nnoremap <F5> "=strftime("%c")<CR>P
 " map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
 " au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
 
-" Forward-Search word under cursor
-map # *N
-
-" Disable Ex-Mode
-nnoremap Q <Nop>
-
-" Install vim-plug if not found
+" Install vim-plug if not found (*nix only)
 if empty(glob('~/.vim/autoload/plug.vim'))
 	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
 				\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
 
 call plug#begin()
 " Plugins
