@@ -95,6 +95,24 @@ vnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
+" Git status
+nnoremap <leader>s :Git status<ENTER>
+
+" Git diff
+nnoremap <leader>d :Git diff<ENTER>
+
+" Git add
+nnoremap <leader>a :Git add
+
+" Git add all
+nnoremap <leader>A :Git add --all<ENTER>
+
+" Git commit 
+nnoremap <leader>c :Git commit<ENTER>
+
+" Git push
+nnoremap <leader>C :Git push<ENTER>
+
 " Misc
 
 " Get all files names in buffer
@@ -158,6 +176,3 @@ if has("gui_running")
 	set guioptions -=m
 	set guioptions -=T
 endif
-
-" Compton Transparency
-" autocmd VimEnter * hi Normal ctermbg=none
