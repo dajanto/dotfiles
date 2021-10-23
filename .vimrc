@@ -143,8 +143,6 @@ endif
 
 call plug#begin()
 " Plugins
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } " Finder
-Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'tpope/vim-fugitive'			" Git integration
