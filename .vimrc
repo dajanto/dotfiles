@@ -84,8 +84,9 @@ xnoremap p "_dP
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
 
-" Copy entire document
-nnoremap <leader>Y gg"+yG
+" Copy entire document or everything but first line (leetcode php)
+nnoremap <leader>Y ggj"+yG
+nnoremap <leader>X gg"+yG
 
 " Copy and pasting with + register
 nnoremap <leader>p "+p
