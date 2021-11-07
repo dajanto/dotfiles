@@ -81,6 +81,9 @@ nnoremap J mzJ`z
 " Multiple p inserts in a row
 xnoremap p "_dP
 
+" Easier parenthesis access on German layout
+set langmap=öäÖÄ;{}[]
+
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
 
