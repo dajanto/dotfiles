@@ -82,7 +82,7 @@ nnoremap J mzJ`z
 xnoremap p "_dP
 
 " Easier parenthesis access on German layout
-set langmap=öäÖÄ;{}[]
+set langmap=äöÄÖ;{}[]
 
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
