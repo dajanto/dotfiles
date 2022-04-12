@@ -1,8 +1,9 @@
 # vim: filetype=i3config
 # This config file will use environment variables such as $BROWSER and $TERMINAL.
 
-# TODO xbacklight brightness change binds
-# TODO volume change binds
+# Brightness
+bind F5 xbacklight -dec 10
+bind F6 xbacklight -inc 10
 
 # Set random background
 exec --no-startup-id feh --bg-fill --randomize ~/GitHub/wallpapers/Landscapes/*
