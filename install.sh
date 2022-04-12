@@ -9,7 +9,8 @@ config="~/.config/"
 
 printf "\n"
 
-if test -d ${config}i3/; 
+// TODO debug
+if test -ad ${config}i3/; 
   then cp .config/i3/config ${config}i3/; 
   else mkdir -p ${config}i3/; cp .config/i3/config ${config}i3/; fi
 echo "i3 [x]";

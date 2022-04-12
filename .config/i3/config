@@ -1,9 +1,18 @@
 # vim: filetype=i3config
 # This config file will use environment variables such as $BROWSER and $TERMINAL.
 
+
+# Found with xev command - debug keys to console
+# XF86MonBrightnessUp, XF86MonBrightnessDown( Brightness up and down )
+# XF86AudioRaiseVolume, XF86AudioLowerVolume, XF86AudioMute ( Volume up, down, and mute )
+
 # Brightness
-bind F5 xbacklight -dec 10
-bind F6 xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+
+# Sound
+# bindsym XF86AudioRaiseVolume 
+# bindsym XF86AudioLowerVolume 
 
 # Set random background
 exec --no-startup-id feh --bg-fill --randomize ~/GitHub/wallpapers/Landscapes/*
