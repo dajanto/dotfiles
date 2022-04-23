@@ -63,8 +63,9 @@ map <space> /
 " Forward-Search word under cursor
 map # *N
 
-" Disable Ex-Mode
-nnoremap Q <Nop>
+" Disable Ex-Mode and rebind macro key
+nnoremap Q q
+nnoremap q <Nop>
 
 " End of line copy
 nnoremap Y yg_
