@@ -160,6 +160,8 @@ Plug 'lifepillar/vim-solarized8'
 Plug 'doums/darcula'
 call plug#end()
 
+" Keep leading zeros with fugitive
+let g:airline#extensions#fugitiveline#enabled = 0
 
 " Color
 " colorscheme darcula
