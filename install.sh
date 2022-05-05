@@ -4,6 +4,6 @@
 
 echo Installing...
 
-rsync -av --exclude='install.sh' --exclude='README.md' --exclude='.git' . ~/dftest
+rsync -av --exclude='install.sh' --exclude='README.md' --exclude='.git' . ~
 
 echo Finished!
