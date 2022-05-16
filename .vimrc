@@ -43,8 +43,8 @@ endif
 
 set undofile                " Save undos after file closes
 set undodir=$HOME/.vim/undo " Where to save undo histories
-set undolevels=10000        " How many undos
-set undoreload=10000        " Number of lines to save for undo
+set undolevels=100000       " How many undos
+set undoreload=100000       " Number of lines to save for undo
 
 " Search and find 
 set wildmenu
@@ -54,8 +54,7 @@ set hlsearch
 set incsearch
 
 " Leader definition
-" TODO more leader binds
-let mapleader = "9"
+let mapleader = "q"
 
 " Search shortcut
 map <space> /
@@ -112,6 +111,9 @@ nnoremap <leader>a :Git add
 " Git add all
 nnoremap <leader>A :Git add --all<ENTER>
 
+" Git add updated
+nnoremap <leader>u :Git add -u<ENTER>
+
 " Git commit 
 nnoremap <leader>c :Git commit<ENTER>
 
@@ -151,6 +153,7 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'tpope/vim-fugitive'			" Git integration
+Plug 'tpope/vim-repeat'				" . command for surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 
@@ -175,7 +178,7 @@ colorscheme gruvbox
 if has("gui_running") 
 
 	" set guifont=Ubuntu_Mono:h18
-	set guifont=Droid_Sans_Mono:h12
+	set guifont=Droid_Sans_Mono:h16
 
 	" No bars
 	set guioptions -=m
