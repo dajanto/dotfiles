@@ -155,6 +155,7 @@ Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'tpope/vim-fugitive'			" Git integration
 Plug 'tpope/vim-repeat'				" . command for surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
+Plug 'mboughaba/i3config.vim'       " i3 syntax highlighting
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 
 " Colorschemes
