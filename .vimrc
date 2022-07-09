@@ -164,6 +164,7 @@ Plug 'junegunn/goyo.vim'			" Distraction-free typing
 Plug 'mboughaba/i3config.vim'       " i3 syntax highlighting
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 Plug 'easymotion/vim-easymotion'	" Better motions
+Plug 'tpope/vim-commentary'			" Commentary binds
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'	
