@@ -120,6 +120,12 @@ nnoremap <leader>c :Git commit<ENTER>
 " Git push
 nnoremap <leader>C :Git push<ENTER>
 
+" Git reset 
+nnoremap <leader>r :Git reset
+
+" Git reset --hard
+nnoremap <leader>R :Git reset --hard<ENTER>
+
 " Misc
 
 " Get all files names in buffer
@@ -157,6 +163,7 @@ Plug 'tpope/vim-repeat'				" . command for surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
 Plug 'mboughaba/i3config.vim'       " i3 syntax highlighting
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
+Plug 'easymotion/vim-easymotion'	" Better motions
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'	
