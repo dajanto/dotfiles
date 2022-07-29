@@ -1,9 +1,10 @@
+"
+" dajantos
 "			_
 "   __   __(_) _ __ ___   _ __   ___ 
 "   \ \ / /| || '_ ` _ \ | '__| / __|
 " _  \ V / | || | | | | || |   | (__ 
 "(_)  \_/  |_||_| |_| |_||_|    \___|
-" by dajanto
 
 " Strange characters fix on Mint Thinkpad 
 if has("unix") 
