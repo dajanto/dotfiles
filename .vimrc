@@ -183,7 +183,7 @@ let g:airline#extensions#fugitiveline#enabled = 0
 " colorscheme darcula
 " colorscheme gruvbox
 " colorscheme solarized8
-"colorscheme papercolor-theme
+"colorscheme papercolor
 "colorscheme nord-vim
 colorscheme palenight
 
