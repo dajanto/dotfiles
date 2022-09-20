@@ -171,6 +171,9 @@ Plug 'tpope/vim-commentary'			" Commentary binds
 Plug 'gruvbox-community/gruvbox'	
 Plug 'lifepillar/vim-solarized8'
 Plug 'doums/darcula'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'arcticicestudio/nord-vim'
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " Keep leading zeros with fugitive
@@ -180,6 +183,9 @@ let g:airline#extensions#fugitiveline#enabled = 0
 " colorscheme darcula
 colorscheme gruvbox
 " colorscheme solarized8
+" colorscheme papercolor-theme
+" colorscheme nord-vim
+" colorscheme palenight.vim
 
 
 " GVIM specifics
