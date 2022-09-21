@@ -166,7 +166,6 @@ Plug 'mboughaba/i3config.vim'       " i3 syntax highlighting
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 Plug 'easymotion/vim-easymotion'	" Better motions
 Plug 'tpope/vim-commentary'			" Commentary binds
-Plug '907th/vim-auto-save'			" Auto saving
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'	
@@ -177,11 +176,10 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
-" Keep leading zeros with fugitive
-let g:airline#extensions#fugitiveline#enabled = 0
-
-let g:auto_save = 1  		" Enable AutoSave on Vim startup
-let g:auto_save_silent = 0	" Notification or not
+" Autosaving natively
+"autocmd TextChanged,TextChangedI * silent write
+"au TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | silent write | endif
+au TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | write | endif
 
 " Color
 " colorscheme darcula
