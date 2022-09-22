@@ -140,7 +140,7 @@ map <F3> :set nospell<ENTER>
 map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 
 " Insert current time and date
-nnoremap <F5> "=strftime("%c")<CR>P
+nnoremap <F5> "=strftime("%c")<CR>P<ENTER>
 
 " Compiling current file with pdflatex silently
 " TODO needs rework
@@ -185,7 +185,7 @@ au TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | 
 " colorscheme darcula
 " colorscheme gruvbox
 " colorscheme solarized8
-colorscheme papercolor
+colorscheme PaperColor
 " colorscheme nord
 " colorscheme palenight
 
