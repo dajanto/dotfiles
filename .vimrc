@@ -142,6 +142,13 @@ map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
 " Insert current time and date
 nnoremap <F5> "=strftime("%c")<CR>P<ENTER>
 
+" Line substitution
+map <F6> :s/
+
+" File substitution
+map <F7> :%s/
+
+
 " Compiling current file with pdflatex silently
 " TODO needs rework
 " map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
@@ -172,22 +179,18 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'lifepillar/vim-solarized8'
 Plug 'doums/darcula'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'arcticicestudio/nord-vim'
-Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
 " Autosaving natively
 "autocmd TextChanged,TextChangedI * silent write
 "au TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | silent write | endif
-au TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | write | endif
+"au TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | write | endif
 
 " Color
 " colorscheme darcula
-" colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme solarized8
-colorscheme PaperColor
-" colorscheme nord
-" colorscheme palenight
+" colorscheme Papercolor
 
 
 " GVIM specifics
