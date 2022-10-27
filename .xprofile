@@ -12,7 +12,7 @@ export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
 # Faster key repeat and delay
 #xset r rate 210 35
 #xset r rate 200 40
-xset r rate 200 45
+xset r rate 200 50
 
 # Open flameshot on startup
 # flameshot &
