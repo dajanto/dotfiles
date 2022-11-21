@@ -6,12 +6,6 @@
 " _  \ V / | || | | | | || |   | (__ 
 "(_)  \_/  |_||_| |_| |_||_|    \___|
 
-" Strange characters fix on Mint Thinkpad 
-if has("unix") 
-	let &t_TI = ""
-	let &t_TE = ""
-endif
-
 " Basic Stuff
 syntax enable
 set encoding=utf-8
