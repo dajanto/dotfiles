@@ -1,0 +1,27 @@
+==> Allgemein:
+bind esc to capslock
+github ssh key
+
+==> Formulae
+
+brew 
+https://github.com/darksonic37/linuxify
+
+lolcat
+fortune 
+cowsay
+neofetch
+htop
+
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+iterm:
+https://apple.stackexchange.com/questions/92173/how-to-prevent-terminal-from-resizing-when-font-size-is-changed
+reuse previous session directory
+selection color orange
+natural text behavior 
+
+==> Casks
+brave-browser	discord		iterm2		phpstorm	spotify
+caffeine	flux		keepassxc	rectangle	sublime-text
