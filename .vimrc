@@ -130,8 +130,7 @@ map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:nohlsearch<ENTER>gg
 map <F2> :set spell<ENTER>
 map <F3> :set nospell<ENTER>
 
-" TODO list line finish command
-map <F4> A **********--> X <--*****ERLEDIGT!*****<ESC>j^
+map <F4> A✔️<ESC>j^
 
 " Insert current time and date
 nnoremap <F5> "=strftime("%c")<CR>P<ENTER>
