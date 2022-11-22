@@ -66,6 +66,7 @@ export PATH="${BREW_HOME}/opt/gnu-which/libexec/gnubin:$PATH"
 
 # grep
 export PATH="${BREW_HOME}/opt/grep/libexec/gnubin:$PATH"
+alias grep="grep --color=auto"
 
 unset BREW_HOME
 
