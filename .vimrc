@@ -162,22 +162,13 @@ Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'tpope/vim-fugitive'			" Git integration
 Plug 'tpope/vim-repeat'				" . command for surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
-Plug 'mboughaba/i3config.vim'       " i3 syntax highlighting
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
-Plug 'easymotion/vim-easymotion'	" Better motions
-Plug 'tpope/vim-commentary'			" Commentary binds
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'	
-Plug 'lifepillar/vim-solarized8'
 Plug 'doums/darcula'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
-
-" Autosaving natively
-"autocmd TextChanged,TextChangedI * silent write
-"au TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | silent write | endif
-"au TextChanged,TextChangedI * if &readonly == 0 && filereadable(bufname('%')) | write | endif
 
 " Color
 " colorscheme darcula
