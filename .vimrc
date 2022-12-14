@@ -171,10 +171,9 @@ Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " Color
-" colorscheme darcula
 colorscheme gruvbox
+" colorscheme darcula
 " colorscheme solarized8
-" colorscheme Papercolor
 
 
 " GVIM specifics
