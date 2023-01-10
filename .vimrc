@@ -30,6 +30,7 @@ set relativenumber
 set cursorline
 set fileencoding=utf-8
 set number
+set scrolloff=8
 
 " If undo directory doesn't exist, create it
 if empty(glob('~/.vim/undo'))
