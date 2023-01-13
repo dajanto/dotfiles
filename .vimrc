@@ -77,6 +77,10 @@ nnoremap J mzJ`z
 " Multiple p inserts in a row
 xnoremap p "_dP
 
+" Improve Ergodox ergonomics
+map <PageUp> <C-u>
+map <PageDown> <C-d>
+
 " Easier parenthesis access on German layout
 set langmap=äöÄÖ;{}[]
 
