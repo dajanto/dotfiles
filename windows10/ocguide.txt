@@ -1,4 +1,18 @@
-
 CPU: i9 9900K
-Ziel: 5ghz mit 400mhz AVX-Offset
+Ziel: 5ghz auf allen Kernen 
 
+- XMP I -> "nein" für Powerlimit Popup
+- AVX-Offset Stufe 4
+- CPU-Core Ratio 50
+- Load Line Calibration Level 6 (Wie stark fällt die Spannung unter Last ab)
+- Current Capability 200%
+- Long Duration Package Power Limit MAX
+- Package Power Time Window MAX
+- Short Duration Package Power Limit MAX
+- Core/Cache Current Limit MAX
+- Min Cache Ratio 43
+- Max Cache Ratio 43
+- Core/Cache Voltage -> Core Voltage Override 1.290
+- DRAM Voltage durch XMP richtig
+- Bedarfsweise DRAM Maximus Tweak Mode ändern
+- Profil erstellen und speichern
