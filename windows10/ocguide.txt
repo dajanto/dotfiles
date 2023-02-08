@@ -1,5 +1,4 @@
 
-
-
-
+CPU: i9 9900K
+Ziel: 5ghz mit 400mhz AVX-Offset
 
