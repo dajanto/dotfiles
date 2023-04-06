@@ -189,7 +189,7 @@ if has("gui_running")
 	set guioptions -=T
 endif
 
-" Configure Neural like so in Vimscript
+" API Key configuration for Neural
 let g:neural = {
 \   'source': {
 \       'openai': {
