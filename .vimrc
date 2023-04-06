@@ -193,7 +193,7 @@ endif
 let g:neural = {
 \   'source': {
 \       'openai': {
-\           'api_key': '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',
+\           'api_key': 'apikey',
 \       },
 \   },
 \}
