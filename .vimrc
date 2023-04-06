@@ -160,6 +160,9 @@ Plug 'tpope/vim-fugitive'			" Git integration
 Plug 'tpope/vim-repeat'				" . command for surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
+Plug 'dense-analysis/neural'		" AI stuff
+Plug 'muniftanjim/nui.nvim'			" AI stuff
+Plug 'elpiloto/significant.nvim'	" AI stuff
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'	
@@ -185,3 +188,12 @@ if has("gui_running")
 	set guioptions -=m
 	set guioptions -=T
 endif
+
+" Configure Neural like so in Vimscript
+let g:neural = {
+\   'source': {
+\       'openai': {
+\           'api_key': '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',
+\       },
+\   },
+\}
