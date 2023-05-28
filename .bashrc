@@ -103,7 +103,6 @@ alias la='ls -lah'
 alias aptapt='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
 alias sdsd='shutdown 0'
 alias vim='nvim'
-alias vim='\vim'
 alias ga='git add -u; git commit -m "uwu"; git push'
 
 alias c='clear'

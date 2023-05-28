@@ -161,7 +161,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
@@ -176,7 +175,6 @@ alias ll='ls -lah'
 alias la='ls -lah'
 alias aptapt='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
 alias sdsd='shutdown 0'
-alias vim='\vim'
 alias ga='git add -u; git commit -m "uwu"; git push'
 alias vim='nvim'
 
