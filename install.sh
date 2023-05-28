@@ -1,6 +1,5 @@
 #!/bin/bash/
 
-
 case "$OSTYPE" in
   darwin*)
     echo "OSX detected. Installing..."
