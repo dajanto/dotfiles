@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/bin/bash/
+
+# mkdir -p .config/nvim/
+# cp .config/nvim/* ~
 
 case "$OSTYPE" in
   darwin*)
