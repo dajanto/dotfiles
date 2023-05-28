@@ -91,33 +91,6 @@ vnoremap <leader>P "+P
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 
-" Git status
-nnoremap <leader>s :Git status<ENTER>
-
-" Git diff
-nnoremap <leader>d :Git diff<ENTER>
-
-" Git add
-nnoremap <leader>a :Git add
-
-" Git add all
-nnoremap <leader>A :Git add --all<ENTER>
-
-" Git add updated
-nnoremap <leader>u :Git add -u<ENTER>
-
-" Git commit 
-nnoremap <leader>c :Git commit<ENTER>
-
-" Git push
-nnoremap <leader>C :Git push<ENTER>
-
-" Git reset 
-nnoremap <leader>r :Git reset
-
-" Git reset --hard
-nnoremap <leader>R :Git reset --hard<ENTER>
-
 " Misc
 
 " Get all files names in buffer
@@ -157,7 +130,6 @@ call plug#begin()
 " Plugins
 Plug 'vim-airline/vim-airline'		" Status Bar
 Plug 'tpope/vim-surround'			" Vim Surround
-Plug 'tpope/vim-fugitive'			" Git integration
 Plug 'tpope/vim-repeat'				" . command for surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
