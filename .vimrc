@@ -25,12 +25,12 @@ set number
 set scrolloff=8
 
 " If undo directory doesn't exist, create it
-if empty(glob('~/.vim/undo'))
-	silent !mkdir ~/.vim/undo >/dev/null 2>&1
-endif
-
-set undofile                " Save undos after file closes
-set undodir=$HOME/.vim/undo " Where to save undo histories
+"if empty(glob('~/.vim/undo'))
+"	silent !mkdir ~/.vim/undo >/dev/null 2>&1
+"endif
+"
+"set undofile                " Save undos after file closes
+"set undodir=$HOME/.vim/undo " Where to save undo histories
 set undolevels=100000       " How many undos
 set undoreload=100000       " Number of lines to save for undo
 
