@@ -23,6 +23,8 @@ set cursorline
 set fileencoding=utf-8
 set number
 set scrolloff=8
+
+set undofile
 set undolevels=100000       " How many undos
 set undoreload=100000       " Number of lines to save for undo
 
@@ -75,18 +77,8 @@ map <F9> :nohlsearch<ENTER>
 nnoremap <leader>Y ggj"+yG
 nnoremap <leader>X gg"+yG
 
-" Copy and pasting with + register
-nnoremap <leader>p "+p
-vnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>P "+P
-nnoremap <leader>y "+y
-vnoremap <leader>y "+y
 
 " Misc
-
-" Get all files names in buffer
-map <F1> :r !ls<ENTER>:%s/.*/mv & &/<ENTER>:nohlsearch<ENTER>gg
 
 " Spelling
 map <F2> :set spell<ENTER>
