@@ -23,14 +23,6 @@ set cursorline
 set fileencoding=utf-8
 set number
 set scrolloff=8
-
-" If undo directory doesn't exist, create it
-"if empty(glob('~/.vim/undo'))
-"	silent !mkdir ~/.vim/undo >/dev/null 2>&1
-"endif
-"
-"set undofile                " Save undos after file closes
-"set undodir=$HOME/.vim/undo " Where to save undo histories
 set undolevels=100000       " How many undos
 set undoreload=100000       " Number of lines to save for undo
 
@@ -110,21 +102,6 @@ map <F6> :s/
 
 " File substitution
 map <F7> :%s/
-
-
-" Compiling current file with pdflatex silently
-" TODO needs rework
-" map <F12> :silent! !(pdflatex %:t & zathura %:r.pdf & disown)<ENTER> <bar> :redraw!
-" au FileType tex map <silent> <expr> <F12> system("pdflatex ".expand("%"))
-
-if !has('win32')
-	" Install vim-plug if not found (*nix only)
-	if empty(glob('~/.vim/autoload/plug.vim'))
-		silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-					\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-		autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-	endif
-endif
 
 call plug#begin()
 " Plugins
