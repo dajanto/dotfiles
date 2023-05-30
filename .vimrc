@@ -144,18 +144,3 @@ call plug#end()
 colorscheme gruvbox
 " colorscheme darcula
 " colorscheme solarized8
-
-
-" GVIM specifics
-
-" Font
-if has("gui_running") 
-
-	" set guifont=Ubuntu_Mono:h18
-	set guifont=Droid_Sans_Mono:h16
-
-	" No bars
-	set guioptions -=m
-	set guioptions -=T
-endif
-
