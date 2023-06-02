@@ -177,6 +177,7 @@ alias aptapt='sudo apt update && sudo apt upgrade -y && sudo apt autoremove'
 alias sdsd='shutdown 0'
 alias ga='git add -u; git commit -m "uwu"; git push'
 alias vim='nvim'
+alias dd='docker-compose down && docker-compose build && docker-compose up -d'
 
 alias c='clear'
 #alias fortune='fortune | cowsay | lolcat'
