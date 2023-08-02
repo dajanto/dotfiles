@@ -105,6 +105,7 @@ alias sdsd='shutdown 0'
 alias vim='nvim'
 alias ga='git add -u; git commit -m "uwu"; git push'
 alias dd='docker-compose down && docker-compose build && docker-compose up -d'
+alias gm='git commit -am'
 
 alias c='clear'
 #alias fortune='fortune | cowsay | lolcat'
