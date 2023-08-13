@@ -115,7 +115,9 @@ alias gl='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%
 alias gpu='git pull'
 alias g='git'
 alias c='clear'
-#alias fortune='fortune | cowsay | lolcat'
+alias grh='git reset --hard'
+alias gsp='git stash pop'
+alias gss='git stash'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
