@@ -118,6 +118,7 @@ alias c='clear'
 alias grh='git reset --hard'
 alias gsp='git stash pop'
 alias gss='git stash'
+alias gmm='git merge'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
