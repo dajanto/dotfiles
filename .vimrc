@@ -102,6 +102,7 @@ Plug 'tpope/vim-surround'			" Vim Surround
 Plug 'tpope/vim-repeat'				" . command for surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
+Plug 'machakann/vim-highlightedyank' " Highlight after yank
 
 " Colorschemes
 Plug 'gruvbox-community/gruvbox'	
