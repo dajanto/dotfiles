@@ -103,16 +103,16 @@ Plug 'tpope/vim-repeat'				" . command for surround
 Plug 'junegunn/goyo.vim'			" Distraction-free typing
 Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 Plug 'machakann/vim-highlightedyank' " Highlight after yank
-Plug 'rebelot/kanagawa.nvim'
 
 " Colorschemes
+Plug 'rebelot/kanagawa.nvim'
 Plug 'gruvbox-community/gruvbox'	
 Plug 'doums/darcula'
 Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " Color
-" colorscheme gruvbox
 colorscheme kanagawa
+" colorscheme gruvbox
 " colorscheme darcula
 " colorscheme solarized8
