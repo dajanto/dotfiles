@@ -112,7 +112,7 @@ Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " Color
-colorscheme kanagawa
-" colorscheme gruvbox
+"colorscheme kanagawa
+colorscheme gruvbox
 " colorscheme darcula
 " colorscheme solarized8
