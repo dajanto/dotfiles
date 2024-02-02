@@ -149,7 +149,7 @@ fi
 
 # fortune | cowsay 
 fortune | cowsay | lolcat
-export EDITOR=vim
+export EDITOR=nvim
 
 # git bash windows only
 #function man {

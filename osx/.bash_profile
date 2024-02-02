@@ -222,4 +222,4 @@ fi
 
 # fortune | cowsay 
 fortune | cowsay | lolcat
-export EDITOR=vim
+export EDITOR=nvim
