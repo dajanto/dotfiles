@@ -83,6 +83,8 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+export PATH="/snap/bin:$PATH"
+
 # fortune | cowsay 
 fortune | cowsay | lolcat
 export EDITOR=nvim
