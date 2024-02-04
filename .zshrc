@@ -12,12 +12,10 @@ esac
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-# old
-#HISTSIZE=10000
-#HISTFILESIZE=20000
-HISTSIZE=
-HISTFILESIZE=
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+0SAVEHIST=1000000
+setopt appendhistory
 
 # make less more friendly for non-text input files, see lesspipe(1)
 #[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
