@@ -1,3 +1,7 @@
+autoload colors; colors;
+setopt prompt_subst
+#
+#
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -24,9 +28,9 @@ HISTFILESIZE=
 #fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
+#case "$TERM" in
+#    xterm-color|*-256color) color_prompt=yes;;
+#esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
@@ -44,39 +48,9 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]🌲:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\w\[\033[00m\]\$ ' 
-    #PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\]\w/ ' 
-else
-    # PS1='${debian_chroot:+($debian_chroot)}\u@\h🌲:\w\$ '
-    #PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\]\w/ '
-    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\w\[\033[00m\]\$ ' 
-fi
-unset color_prompt force_color_prompt
+PROMPT='%{$bg[black]%}%{$fg[green]%}$USER%{$reset_color%}🌲$(dirs)$ '
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    #PS1='\[\e[32;40m\]\u\[\e[m\]🌲\[\e[36m\]\\$\[\e[m\]\w/ ' 
-    PS1='\[\e[32;40m\]\u\[\e[m\]🌲\w\[\033[00m\]\$ ' 
-    ;;
-*)
-    ;;
-esac
-
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
+alias ls='ls --color=auto'
 alias l='ls -lh'
 alias ll='ls -lah'
 alias la='ls -lah'
@@ -101,6 +75,9 @@ alias gsp='git stash pop'
 alias gss='git stash'
 alias gmm='git merge'
 alias cdwin='cd /mnt/c/Users/dajanto/'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
