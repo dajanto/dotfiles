@@ -2,6 +2,8 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 BREW_HOME=$(brew --prefix)
 PATH="/opt/homebrew/opt/man-db/libexec/bin:$PATH"
 
+autoload -Uz compinit && compinit
+
 # most programs
 export PATH="${BREW_HOME}/bin:$PATH"
 export MANPATH="${BREW_HOME}/share/man:$MANPATH"
