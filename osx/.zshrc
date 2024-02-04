@@ -85,7 +85,7 @@ HISTCONTROL=ignoreboth
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
-0SAVEHIST=1000000
+SAVEHIST=1000000
 setopt appendhistory
 
 # make less more friendly for non-text input files, see lesspipe(1)

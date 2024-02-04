@@ -14,7 +14,7 @@ HISTCONTROL=ignoreboth
 
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
-0SAVEHIST=1000000
+SAVEHIST=1000000
 setopt appendhistory
 
 # make less more friendly for non-text input files, see lesspipe(1)
@@ -76,6 +76,7 @@ alias cdwin='cd /mnt/c/Users/dajanto/'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias history='history 0'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
