@@ -147,6 +147,7 @@ alias cdwin='cd /mnt/c/Users/dajanto/'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias history='history 0'
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
