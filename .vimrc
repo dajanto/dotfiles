@@ -67,8 +67,9 @@ xnoremap p "_dP
 map <PageUp> <C-u>
 map <PageDown> <C-d>
 
-" Easier parenthesis access on German layout
-set langmap=äöÄÖ;{}[]
+" TODO
+set langmap=ö;^
+nnoremap ö ^
 
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
