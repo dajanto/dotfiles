@@ -67,8 +67,11 @@ xnoremap p "_dP
 map <PageUp> <C-u>
 map <PageDown> <C-d>
 
-" Easier parenthesis access on German layout
-set langmap=äöÄÖ;{}[]
+" Easier first non blank character access
+set langmap=öä;^^
+nnoremap ö ^
+nnoremap ä ^
+
 
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
