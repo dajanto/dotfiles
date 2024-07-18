@@ -67,9 +67,11 @@ xnoremap p "_dP
 map <PageUp> <C-u>
 map <PageDown> <C-d>
 
-" TODO
-set langmap=ö;^
+" Easier first non blank character access
+set langmap=öä;^^
 nnoremap ö ^
+nnoremap ä ^
+
 
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
