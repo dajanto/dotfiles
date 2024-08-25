@@ -68,10 +68,9 @@ map <PageUp> <C-u>
 map <PageDown> <C-d>
 
 " Easier first non blank character access
-set langmap=öä;^^
-nnoremap ö ^
+" set langmap=öä;^^
+nnoremap ö viB
 nnoremap ä ^
-
 
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
@@ -79,7 +78,6 @@ map <F9> :nohlsearch<ENTER>
 " Copy entire document or everything but first line (leetcode php)
 nnoremap <leader>Y ggj"+yG
 nnoremap <leader>X gg"+yG
-
 
 " Misc
 
