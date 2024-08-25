@@ -72,14 +72,12 @@ map <PageDown> <C-d>
 nnoremap ö viB
 nnoremap ä ^
 
-
 " Dehighlight search results
 map <F9> :nohlsearch<ENTER>
 
 " Copy entire document or everything but first line (leetcode php)
 nnoremap <leader>Y ggj"+yG
 nnoremap <leader>X gg"+yG
-
 
 " Misc
 
