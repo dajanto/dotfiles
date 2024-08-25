@@ -68,8 +68,8 @@ map <PageUp> <C-u>
 map <PageDown> <C-d>
 
 " Easier first non blank character access
-set langmap=öä;^^
-nnoremap ö ^
+" set langmap=öä;^^
+nnoremap ö viB
 nnoremap ä ^
 
 
