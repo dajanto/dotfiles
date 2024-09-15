@@ -78,6 +78,8 @@ alias gl='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%
 alias gpu='git pull'
 alias g='git'
 alias c='clear'
+alias cleanit='git clean -ffxd -e .env --dry-run'
+alias cleanitnow='git clean -ffxd -e .env'
 alias grh='git reset --hard'
 alias gri='git rebase -i'
 alias gsp='git stash pop'
