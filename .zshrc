@@ -1,7 +1,17 @@
+
+case "$OSTYPE" in
+  darwin*)
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    BREW_HOME=$(brew --prefix)
+    unset BREW_HOME
+    autoload -Uz compinit && compinit ;;
+  linux*)
+    export PATH="/snap/bin:$PATH" ;;
+esac
+
 autoload colors; colors;
 setopt prompt_subst
-#
-#
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -60,12 +70,15 @@ alias dd='docker-compose down && docker-compose build && docker-compose up -d'
 alias gm='git commit -am'
 alias gc='git commit'
 alias gp='git push'
+alias gpf='git push --force-with-lease'
+alias gpff='git push -f'
 alias gs='git status'
 alias gst='git switch' 
 alias gd='git diff -w'
 alias gds='git diff -w --staged'
 alias gsw='git show -w'
-alias gl='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --'
+alias gl='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit -- | head -n 11'
+alias gll='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --'
 alias gpu='git pull'
 alias g='git'
 alias c='clear'
@@ -77,19 +90,19 @@ alias grs='git restore'
 alias gsp='git stash pop'
 alias gss='git stash'
 alias gmm='git merge'
+alias gb='git branch'
 alias cdwin='cd /mnt/c/Users/dajanto/'
+alias grp='grep -ir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 alias history='history 0'
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+#if [ -f ~/.bash_aliases ]; then
+#    . ~/.bash_aliases
+#fi
 
-export PATH="/snap/bin:$PATH"
-
-# fortune | cowsay 
+# fortune | cowsay
 fortune | cowsay | lolcat
 export EDITOR=nvim
 # set -o vi
