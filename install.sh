@@ -5,7 +5,7 @@ case "$OSTYPE" in
     echo "OSX detected. Installing..."
     cp .vimrc ~
     cp osx/.bash_profile ~
-    cp osx/.zshrc ~
+    cp .zshrc ~
     mkdir -p ~/.config/nvim/
     cp .config/nvim/* ~/.config/nvim
     echo "...finished!" ;;
