@@ -129,4 +129,7 @@ export EDITOR=nvim
 #    [[ $ok -eq 0 && -n "$pre" ]] && printf '%s' "$pre" | less || printf 'Got nothing.\n' >&2
 #    return $ok
 #}
+
+# curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+# brew install zoxide 
 eval "$(zoxide init zsh)"
