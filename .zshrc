@@ -1,4 +1,4 @@
-
+export PATH="$HOME/.local/bin:$PATH"
 case "$OSTYPE" in
   darwin*)
     eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -128,3 +128,4 @@ export EDITOR=nvim
 #    [[ $ok -eq 0 && -n "$pre" ]] && printf '%s' "$pre" | less || printf 'Got nothing.\n' >&2
 #    return $ok
 #}
+eval "$(zoxide init zsh)"
