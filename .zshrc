@@ -111,8 +111,6 @@ alias nf='neofetch'
 alias history='history 0'
 alias cppw='pwd | xclip -selection clipboard'
 
-source ~/github/dotfiles/scripts/emoji
-
 mkcd () {
   \mkdir -p "$1"
   cd "$1"
