@@ -4,7 +4,6 @@ case "$OSTYPE" in
   darwin*)
     echo "OSX detected. Installing..."
     cp .vimrc ~
-    cp osx/.bash_profile ~
     cp .zshrc ~
     mkdir -p ~/.config/nvim/
     cp .config/nvim/* ~/.config/nvim
