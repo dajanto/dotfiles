@@ -12,7 +12,6 @@ case "$OSTYPE" in
   linux*)
     echo "Linux detected. Installing..."
     cp .vimrc ~
-    cp .bashrc ~
     cp .zshrc ~
     mkdir -p ~/.config/nvim/
     cp .config/nvim/* ~/.config/nvim
