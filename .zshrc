@@ -90,6 +90,7 @@ alias pat='php artisan tinker'
 alias gd='git diff -w'
 alias gds='git diff -w --staged'
 alias gsw='git show -w'
+# todo bro
 alias gl='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit -- | head -n 11'
 alias gll='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --'
 #alias gpu='git pull'
