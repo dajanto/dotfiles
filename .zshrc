@@ -1,69 +1,62 @@
-export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+# ============================================================
+# PATH
+# ============================================================
+export PATH="$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# ============================================================
+# Homebrew (muss früh sein, damit brew-installierte Tools verfügbar sind)
+# ============================================================
+export HOMEBREW_NO_ENV_HINTS=1
 
 case "$OSTYPE" in
   darwin*)
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-    BREW_HOME=$(brew --prefix)
-    unset BREW_HOME
-    autoload -Uz compinit && compinit ;;
+    eval "$(/opt/homebrew/bin/brew shellenv)" ;;
   linux*)
-    export PATH="/snap/bin:$PATH" ;;
+    export PATH="/snap/bin:$PATH"
+    [ -d /home/linuxbrew/.linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)" ;;
 esac
 
-autoload colors; colors;
-setopt prompt_subst
+# ============================================================
+# NVM (vor Interactive-Check, damit es auch in Scripts funktioniert)
+# ============================================================
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+# ============================================================
+# Nicht-interaktiv? → Hier aufhören
+# ============================================================
+[[ -o interactive ]] || return
 
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
+# ============================================================
+# Completion
+# ============================================================
+autoload -Uz compinit && compinit
 
+# ============================================================
+# History (Zsh-Syntax, NICHT Bash)
+# ============================================================
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 setopt appendhistory
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
 
-# make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-#if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-#    debian_chroot=$(cat /etc/debian_chroot)
-#fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-#case "$TERM" in
-#    xterm-color|*-256color) color_prompt=yes;;
-#esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-        # We have color support; assume it's compliant with Ecma-48
-        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-        # a case would tend to support setf rather than setaf.)
-        color_prompt=yes
-    else
-        color_prompt=
-    fi
-fi
-
+# ============================================================
+# Prompt
+# ============================================================
+autoload -U colors && colors
+setopt prompt_subst
 PROMPT='%{$bg[black]%}%{$fg[green]%}$USER%{$reset_color%}🌲$(dirs)$ '
 
+# ============================================================
+# Editor
+# ============================================================
+export EDITOR=nvim
+
+# ============================================================
+# Aliases
+# ============================================================
 alias ls='ls --color=auto'
 alias l='ls -lh'
 alias ll='ls -lah'
@@ -103,7 +96,6 @@ alias glt='git log --color --first-parent --graph --date=format:"%Y-%m-%d, %H:%M
 alias gltt='git log --color --first-parent --graph --date=format:"%Y-%m-%d, %H:%M" --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr,%Creset %C(yellow)%ad%Creset) %C(bold blue)<%an>%Creset" --abbrev-commit --'
 alias glo='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit -- | head -n 11'
 alias gloo='git log --color --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --'
-#alias gpu='git pull'
 alias gu='git pull'
 alias g='git'
 alias c='clear'
@@ -133,32 +125,20 @@ alias nf='neofetch'
 alias history='history 0'
 alias cppw='pwd | xclip -selection clipboard'
 
+# ============================================================
+# Functions
+# ============================================================
 mkcd () {
   \mkdir -p "$1"
   cd "$1"
 }
 
-#if [ -f ~/.bash_aliases ]; then
-#    . ~/.bash_aliases
-#fi
+# ============================================================
+# Tools
+# ============================================================
+command -v zoxide &>/dev/null && eval "$(zoxide init zsh)"
 
-# fortune | cowsay
-fortune | cowsay | lolcat
-export EDITOR=nvim
-# set -o vi
-
-# git bash windows only
-#function man {
-#    local section=all
-#    if [[ "$1" =~ ^[0-9]+$ ]]; then section="$1"; shift; fi
-#    local doc="$(curl -v --silent --data-urlencode topic="$@" --data-urlencode section="$section" http://man.he.net/ 2>&1)"
-#    local ok=$?
-#    local pre="$(printf '%s' "$doc" | sed -ne "/<PRE>/,/<\/PRE>/ { /<PRE>/ { n; b; }; p }")"
-#    [[ $ok -eq 0 && -n "$pre" ]] && printf '%s' "$pre" | less || printf 'Got nothing.\n' >&2
-#    return $ok
-#}
-
-# curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-# brew install zoxide
-eval "$(zoxide init zsh)"
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
+# ============================================================
+# Greeting
+# ============================================================
+(( $+commands[fortune] )) && (( $+commands[cowsay] )) && (( $+commands[lolcat] )) && fortune | cowsay | lolcat
