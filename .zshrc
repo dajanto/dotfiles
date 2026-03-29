@@ -4,7 +4,7 @@
 export PATH="$HOME/.local/bin:$HOME/.config/composer/vendor/bin:$PATH"
 
 # ============================================================
-# Homebrew (muss früh sein, damit brew-installierte Tools verfügbar sind)
+# Homebrew
 # ============================================================
 export HOMEBREW_NO_ENV_HINTS=1
 
@@ -17,13 +17,13 @@ case "$OSTYPE" in
 esac
 
 # ============================================================
-# NVM (vor Interactive-Check, damit es auch in Scripts funktioniert)
+# NVM
 # ============================================================
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 # ============================================================
-# Nicht-interaktiv? → Hier aufhören
+# Not interactive?
 # ============================================================
 [[ -o interactive ]] || return
 
@@ -33,7 +33,7 @@ export NVM_DIR="$HOME/.nvm"
 autoload -Uz compinit && compinit
 
 # ============================================================
-# History (Zsh-Syntax, NICHT Bash)
+# History
 # ============================================================
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
@@ -104,6 +104,7 @@ alias cleanitnow='git clean -ffxd -e .env'
 alias grh='git reset --hard'
 alias gri='git rebase -i'
 alias grs='git restore'
+alias grsp='git restore -p'
 alias gsp='git stash pop'
 alias gss='git stash'
 alias gt='git tag'
@@ -114,6 +115,7 @@ alias gff='git flow feature'
 alias gfr='git flow release'
 alias gfh='git flow hotfix'
 alias gmm='git merge'
+alias gms='git merge --squash'
 alias gb='git branch'
 alias cdwin='cd /mnt/c/Users/dajanto/'
 alias grp='grep -ir --color=auto'
