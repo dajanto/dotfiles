@@ -1,4 +1,5 @@
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -52,12 +53,12 @@ setopt appendhistory
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -82,13 +83,13 @@ alias gptt='git push --tags'
 alias gpf='git push --force-with-lease'
 alias gpff='git push -f'
 alias gs='git status'
-alias gst='git switch' 
-alias gstm='git switch master' 
-alias gstmm='git switch main' 
-alias gsl='git stash list' 
-alias gsa='git stash apply' 
-alias pa='php artisan' 
-alias pat='php artisan tinker' 
+alias gst='git switch'
+alias gstm='git switch master'
+alias gstmm='git switch main'
+alias gsl='git stash list'
+alias gsa='git stash apply'
+alias pa='php artisan'
+alias pat='php artisan tinker'
 alias pam='php artisan migrate'
 alias pamr='php artisan migrate:rollback'
 alias pao='php artisan optimize'
@@ -158,5 +159,6 @@ export EDITOR=nvim
 #}
 
 # curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-# brew install zoxide 
+# brew install zoxide
 eval "$(zoxide init zsh)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv zsh)"
