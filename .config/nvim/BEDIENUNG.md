@@ -1,10 +1,10 @@
 # Bedienungsanleitung — Neovim wie IntelliJ (Alltag)
 
-Diese Config ist **LazyVim + eine JetBrains-Tastenebene**. Ziel: du arbeitest mit deinen
-IntelliJ-Reflexen (Ctrl+B, Shift+F6, Alt+Enter, Ctrl+Shift+F …), bekommst aber Vim-Editing dazu.
+Diese Config ist **LazyVim + eine JetBrains-Tastenebene**: du arbeitest mit deinen IntelliJ-Reflexen
+(Ctrl+B, Shift+F6, Alt+Enter, Ctrl+Shift+F …).
 
 > **Wichtigster Trick:** Wenn du eine Taste vergisst, drück **`Leertaste`** (= Leader) und warte —
-> ein Menü (which-key) zeigt dir alle Befehle. So brauchst du nichts auswendig zu lernen.
+> ein Menü (which-key) zeigt dir alle Befehle.
 
 ---
 
@@ -13,42 +13,15 @@ IntelliJ-Reflexen (Ctrl+B, Shift+F6, Alt+Enter, Ctrl+Shift+F …), bekommst aber
 ```sh
 cd ~/mein/projekt
 nvim .            # öffnet Explorer im Projekt
-# oder direkt eine Datei:
 nvim app/Models/User.php
 ```
 
 Erststart lädt Plugins automatisch. Sprachserver/Formatter kommen über Mason (`:Mason`),
-Treesitter-Parser über `:TSInstall` bzw. automatisch beim Öffnen der jeweiligen Dateityp.
-
-**Speichern & Beenden** (die drei, die du sofort brauchst):
-- Speichern: `:w` + Enter (oder `Leertaste w`)
-- Beenden: `:q` + Enter — alles beenden: `:qa`
-- Speichern **und** beenden: `ZZ` (Großbuchstaben, im Normal-Modus)
+Treesitter-Parser automatisch beim Öffnen des jeweiligen Dateityps.
 
 ---
 
-## 2. Vim-Grundlagen für IntelliJ-Umsteiger (2 Minuten)
-
-Neovim ist **modal**. Du bist meistens im **Normal-Modus** (Tasten = Befehle, nicht Text).
-
-| Modus | Wozu | Rein | Raus |
-|---|---|---|---|
-| **Normal** | Navigieren, Befehle | `Esc` | — |
-| **Insert** | Text tippen | `i` (vor Cursor), `a` (nach), `o` (neue Zeile) | `Esc` |
-| **Visual** | Markieren | `v` (Zeichen), `V` (Zeile), `Ctrl+v` (Block) | `Esc` |
-
-**Das absolute Minimum an Motions** (im Normal-Modus):
-- Bewegen: `h j k l` (←↓↑→), Wort `w`/`b`, Zeilenanfang `^`, Zeilenende `$`, Datei `gg`/`G`
-- Löschen/Ändern: `dd` (Zeile löschen), `ciw` (Wort ersetzen), `x` (Zeichen), `u` (undo), `Ctrl+r` (redo)
-- Kopieren/Einfügen: `yy` (Zeile yanken), `p` (einfügen)
-- **`.`** wiederholt die letzte Änderung — extrem nützlich.
-
-Du kannst die JetBrains-Tasten unten nutzen, ohne Vim zu „können" — aber diese Handvoll Motions
-macht dich sofort schneller.
-
----
-
-## 3. Der typische Arbeitstag
+## 2. Der typische Arbeitstag
 
 ### Dateien & Suche
 | Was | Taste (JetBrains) | Alternative (Leader) |
@@ -62,7 +35,7 @@ macht dich sofort schneller.
 | Projekt-Explorer (Tree) | `Alt+1` | `Leertaste e` |
 | Ersetzen im Projekt | `Ctrl+Shift+R` | — |
 
-> In der Suchliste: mit `Ctrl+j`/`Ctrl+k` (oder ↑↓) wählen, `Enter` öffnen, `Ctrl+v`/`Ctrl+s` in
+> In der Auswahlliste: mit `Ctrl+j`/`Ctrl+k` (oder ↑↓) wählen, `Enter` öffnen, `Ctrl+v`/`Ctrl+s` in
 > vertikalem/horizontalem Split öffnen, `Esc` schließen.
 
 ### Im Code navigieren
@@ -95,11 +68,10 @@ macht dich sofort schneller.
 ### Git
 - **lazygit** (volle Git-UI): `Leertaste g g`
 - Zeilen-Blame: `Leertaste g b` · Datei-History: `Leertaste g f`
-- Hunk vor/zurück: `]h` / `[h` · Hunk stagen: im Gitsigns-Menü `Leertaste g h`
+- Hunk vor/zurück: `]h` / `[h`
 
 ### Terminal
 - Terminal auf/zu: `Alt+F12`
-- Aus dem Terminal zurück in Normal: `Ctrl+\` `Ctrl+n`
 
 ### Fenster, Tabs & Buffer
 | Was | Taste |
@@ -108,11 +80,10 @@ macht dich sofort schneller.
 | Vertikal/horizontal teilen | `Leertaste \|` / `Leertaste -` |
 | Nächster/voriger Buffer (Tab) | `Shift+l` / `Shift+h` |
 | Buffer schließen | `Leertaste b d` |
-| Suche-Highlight weg | `Esc` (oder `F9`) |
 
 ---
 
-## 4. Pro Sprache/Framework
+## 3. Pro Sprache/Framework
 
 ### PHP / Laravel
 - **Intelephense** liefert Completion, Go-to-Definition, Hover, Diagnostics.
@@ -141,19 +112,19 @@ macht dich sofort schneller.
 
 ---
 
-## 5. Wenn eine Taste nicht geht (Terminal-Protokoll)
+## 4. Wenn eine Taste nicht geht (Terminal-Protokoll)
 
 Chords wie `Ctrl+.`, `Ctrl+Shift+F`, `Ctrl+Alt+L` brauchen das **kitty keyboard protocol**:
 - **Ghostty** (macOS): läuft ✓
 - **Windows Terminal** (WSL): ab **v1.25** ✓ — sonst nimm die `Leertaste`-Alternativen aus den Tabellen.
 
-Schnelltest: `nvim` → `i` (Insert) → `Ctrl+v` → dann `Ctrl+.` drücken.
+Schnelltest: `nvim` → `i` → `Ctrl+v` → dann `Ctrl+.` drücken.
 - Erscheint etwas wie `^[[46;5u` → Protokoll aktiv ✓
-- Kommt nur `.` → Terminal aktualisieren/wechseln, bis dahin `Leertaste`-Wege nutzen.
+- Kommt nur `.` → Terminal aktualisieren/wechseln, bis dahin die `Leertaste`-Wege nutzen.
 
 ---
 
-## 6. Wartung & Hilfe
+## 5. Wartung & Hilfe
 
 | Befehl | Zweck |
 |---|---|
@@ -168,10 +139,10 @@ Sprachen in `lua/config/lazy.lua` (oder `:LazyExtras`), eigene Plugins in `lua/p
 
 ---
 
-## 7. Aktivieren (fest installieren)
+## 6. Aktivieren (fest installieren)
 
 Bisher läuft alles isoliert testbar über `NVIM_APPNAME=nvim-jb nvim` (verändert deine bestehende
-`~/.config/nvim` nicht). Wenn du es zum Standard machen willst:
+`~/.config/nvim` nicht). Zum Standard machen:
 
 ```sh
 cd ~/github/dotfiles
