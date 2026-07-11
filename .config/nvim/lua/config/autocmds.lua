@@ -1,0 +1,3 @@
+-- Add your autocmds here.
+-- LazyVim's default autocmds live in `lazyvim.config.autocmds` and are loaded
+-- automatically. This file is for your own additions.
