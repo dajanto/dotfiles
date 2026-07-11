@@ -106,6 +106,7 @@ Plug 'sheerun/vim-polyglot'			" Syntax Highlighting improvements and other stuff
 Plug 'machakann/vim-highlightedyank' " Highlight after yank
 
 " Colorschemes
+Plug 'nickkadutskyi/jb.nvim'			" JetBrains (Darcula) theme
 Plug 'rebelot/kanagawa.nvim'
 Plug 'gruvbox-community/gruvbox'	
 Plug 'doums/darcula'
@@ -113,7 +114,8 @@ Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 " Color
+colorscheme jb
 "colorscheme kanagawa
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme darcula
 " colorscheme solarized8
