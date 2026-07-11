@@ -43,7 +43,7 @@ require("lazy").setup({
     { import = "plugins" },
   },
   defaults = { lazy = false, version = false },
-  install = { colorscheme = { "gruvbox", "tokyonight", "habamax" } },
+  install = { colorscheme = { "jb", "tokyonight", "habamax" } },
   checker = { enabled = true, notify = false },
   performance = {
     rtp = {
