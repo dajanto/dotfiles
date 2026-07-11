@@ -1,6 +1,6 @@
--- Set leader keys and LazyVim toggles BEFORE lazy starts, so plugins/extras
--- pick them up correctly.
-vim.g.mapleader = " "
+-- Set leader keys and LazyVim toggles BEFORE lazy starts, so plugin `keys=` specs
+-- pick them up. (Also set in config/options.lua, which overrides LazyVim's default.)
+vim.g.mapleader = "q"
 vim.g.maplocalleader = "\\"
 
 -- The LazyVim `lang.php` extra defaults to phpactor. Use Intelephense instead

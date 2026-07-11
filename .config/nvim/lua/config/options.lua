@@ -2,6 +2,12 @@
 -- ignorecase+smartcase, termguicolors, ...). Here we only add personal
 -- preferences carried over from the old .vimrc.
 
+-- Leader = "q" like the old .vimrc, so Space is free for search (see keymaps.lua).
+-- Must live here: LazyVim loads its own options (mapleader = Space) first and the
+-- user's options.lua after, so this is where the override actually wins.
+vim.g.mapleader = "q"
+vim.g.maplocalleader = "\\"
+
 local opt = vim.opt
 
 -- German + English spell checking (toggle with F2/F3, see keymaps.lua). Spell is

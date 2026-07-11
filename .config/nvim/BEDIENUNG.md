@@ -3,8 +3,8 @@
 Diese Config ist **LazyVim + eine JetBrains-Tastenebene**: du arbeitest mit deinen IntelliJ-Reflexen
 (Ctrl+B, Shift+F6, Alt+Enter, Ctrl+Shift+F …).
 
-> **Wichtigster Trick:** Wenn du eine Taste vergisst, drück **`Leertaste`** (= Leader) und warte —
-> ein Menü (which-key) zeigt dir alle Befehle.
+> **Zwei Tasten zum Merken:** **`Leertaste`** = Suche in der Datei (`/`, wie in deiner `.vimrc`).
+> **`q`** = Leader (Befehlstaste): drück `q` und warte — das which-key-Menü zeigt dir alle Befehle.
 
 ---
 
@@ -24,15 +24,16 @@ Treesitter-Parser automatisch beim Öffnen des jeweiligen Dateityps.
 ## 2. Der typische Arbeitstag
 
 ### Dateien & Suche
-| Was | Taste (JetBrains) | Alternative (Leader) |
+| Was | Taste (JetBrains) | Alternative (Leader `q`) |
 |---|---|---|
-| Search Everywhere | `Leertaste Leertaste` | — |
-| Datei öffnen (Go to File) | `Ctrl+Shift+N` | `Leertaste f f` |
-| Im Projekt suchen (Find in Path) | `Ctrl+Shift+F` | `Leertaste /` |
-| Zuletzt benutzte Dateien | `Ctrl+E` | `Leertaste f r` |
-| Symbol in Datei (Go to Class) | `Ctrl+N` | `Leertaste s s` |
-| Aktion/Befehl finden | `Ctrl+Shift+A` | `Leertaste :` |
-| Projekt-Explorer (Tree) | `Alt+1` | `Leertaste e` |
+| In Datei suchen | `Leertaste` | — |
+| Search Everywhere | `q` dann `Leertaste` | — |
+| Datei öffnen (Go to File) | `Ctrl+Shift+N` | `q f f` |
+| Im Projekt suchen (Find in Path) | `Ctrl+Shift+F` | `q /` |
+| Zuletzt benutzte Dateien | `Ctrl+E` | `q f r` |
+| Symbol in Datei (Go to Class) | `Ctrl+N` | `q s s` |
+| Aktion/Befehl finden | `Ctrl+Shift+A` | `q :` |
+| Projekt-Explorer (Tree) | `Alt+1` | `q e` |
 | Ersetzen im Projekt | `Ctrl+Shift+R` | — |
 
 > In der Auswahlliste: mit `Ctrl+j`/`Ctrl+k` (oder ↑↓) wählen, `Enter` öffnen, `Ctrl+v`/`Ctrl+s` in
@@ -51,9 +52,9 @@ Treesitter-Parser automatisch beim Öffnen des jeweiligen Dateityps.
 ### Code ändern & refactoren
 | Was | Taste | |
 |---|---|---|
-| Kontextaktionen / Quick Fix | `Alt+Enter` oder `Ctrl+.` | (auch `Leertaste c a`) |
-| Umbenennen (Rename) | `Shift+F6` | (auch `Leertaste c r`) |
-| Code formatieren | `Ctrl+Alt+L` | (auch `Leertaste c f`) |
+| Kontextaktionen / Quick Fix | `Alt+Enter` oder `Ctrl+.` | (auch `q c a`) |
+| Umbenennen (Rename) | `Shift+F6` | (auch `q c r`) |
+| Code formatieren | `Ctrl+Alt+L` | (auch `q c f`) |
 | Zeile aus-/einkommentieren | `Ctrl+/` | |
 | Zeile verschieben | `Alt+Shift+↑` / `Alt+Shift+↓` | |
 | Quick-Doku (Hover) | `Ctrl+Q` oder `K` | |
@@ -61,13 +62,13 @@ Treesitter-Parser automatisch beim Öffnen des jeweiligen Dateityps.
 | Autovervollständigung | tippen → Liste; `Enter` bestätigt, `Ctrl+Space` erzwingt | |
 
 ### Diagnose / Fehler
-- Fehlerliste (Trouble): `Leertaste x x`
-- Fehler unter Cursor anzeigen: `Leertaste c d`
+- Fehlerliste (Trouble): `q x x`
+- Fehler unter Cursor anzeigen: `q c d`
 - Springen: `]d` / `[d` (Diagnose), `]e` / `[e` (nur Fehler)
 
 ### Git
-- **lazygit** (volle Git-UI): `Leertaste g g`
-- Zeilen-Blame: `Leertaste g b` · Datei-History: `Leertaste g f`
+- **lazygit** (volle Git-UI): `q g g`
+- Zeilen-Blame: `q g b` · Datei-History: `q g f`
 - Hunk vor/zurück: `]h` / `[h`
 
 ### Terminal
@@ -77,9 +78,9 @@ Treesitter-Parser automatisch beim Öffnen des jeweiligen Dateityps.
 | Was | Taste |
 |---|---|
 | Zwischen Splits springen | `Ctrl+h/j/k/l` |
-| Vertikal/horizontal teilen | `Leertaste \|` / `Leertaste -` |
+| Vertikal/horizontal teilen | `q \|` / `q -` |
 | Nächster/voriger Buffer (Tab) | `Shift+l` / `Shift+h` |
-| Buffer schließen | `Leertaste b d` |
+| Buffer schließen | `q b d` |
 
 ---
 
@@ -92,7 +93,7 @@ Treesitter-Parser automatisch beim Öffnen des jeweiligen Dateityps.
 - **Formatieren** mit **Laravel Pint** (`Ctrl+Alt+L`) — legt eine `pint.json` ins Projekt, dann wird
   euer Team-Standard genutzt. Braucht ein `php`-Binary (`brew install php composer`).
 - **Blade** (`*.blade.php`): eigenes Highlighting (Treesitter), Format via `blade-formatter`.
-- **Artisan/Routes/Views** über `laravel.nvim`: `Leertaste L` (Menü), z.B. `Leertaste L a` (Artisan).
+- **Artisan/Routes/Views** über `laravel.nvim`: `q L` (Menü), z.B. `q L a` (Artisan).
 
 ### Vue / Nuxt
 - `.vue`-Dateien: **vtsls** (TypeScript-Intelligenz inkl. Komponenten) + **vue_ls** (Template/SFC).
@@ -116,11 +117,11 @@ Treesitter-Parser automatisch beim Öffnen des jeweiligen Dateityps.
 
 Chords wie `Ctrl+.`, `Ctrl+Shift+F`, `Ctrl+Alt+L` brauchen das **kitty keyboard protocol**:
 - **Ghostty** (macOS): läuft ✓
-- **Windows Terminal** (WSL): ab **v1.25** ✓ — sonst nimm die `Leertaste`-Alternativen aus den Tabellen.
+- **Windows Terminal** (WSL): ab **v1.25** ✓ — sonst nimm die `q`-Alternativen aus den Tabellen.
 
 Schnelltest: `nvim` → `i` → `Ctrl+v` → dann `Ctrl+.` drücken.
 - Erscheint etwas wie `^[[46;5u` → Protokoll aktiv ✓
-- Kommt nur `.` → Terminal aktualisieren/wechseln, bis dahin die `Leertaste`-Wege nutzen.
+- Kommt nur `.` → Terminal aktualisieren/wechseln, bis dahin die `q`-Wege nutzen.
 
 ---
 
@@ -132,9 +133,9 @@ Schnelltest: `nvim` → `i` → `Ctrl+v` → dann `Ctrl+.` drücken.
 | `:Mason` | LSP-Server & Formatter installieren/prüfen |
 | `:checkhealth` | Diagnose der ganzen Installation |
 | `:LspInfo` | Welche Sprachserver hängen am aktuellen Buffer? |
-| `Leertaste s k` | Alle Tastenkürzel durchsuchen |
+| `q s k` | Alle Tastenkürzel durchsuchen |
 
-**Anpassen:** Tasten in `lua/config/keymaps.lua`, Optionen in `lua/config/options.lua`,
+**Anpassen:** Tasten in `lua/config/keymaps.lua`, Optionen (inkl. Leader) in `lua/config/options.lua`,
 Sprachen in `lua/config/lazy.lua` (oder `:LazyExtras`), eigene Plugins in `lua/plugins/*.lua`.
 
 ---

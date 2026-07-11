@@ -134,8 +134,9 @@ map("n", "<F5>", '"=strftime("%c")<cr>P', { desc = "Insert date/time" })
 map("n", "<F6>", ":s/", { desc = "Substitute (line)" })
 map("n", "<F7>", ":%s/", { desc = "Substitute (file)" })
 
--- NOTE: intentionally NOT migrated (they conflict with the new space-leader /
--- LazyVim, or are rarely useful):
---  * `<space>` -> `/`   (space is now the leader key; use `/` to search)
---  * leader Y/X leetcode copy helpers (old leader was `q`)
---  * Q/q macro swap (LazyVim uses `q` to close special windows)
+-- Restored from the old .vimrc: leader is "q" (set in config/options.lua), so Space
+-- is free for search again. which-key intercepts `q` as a trigger (lua/plugins/whichkey.lua),
+-- so pressing `q` opens the menu instead of recording a macro; Q (replay) is off too.
+map({ "n", "x", "o" }, "<Space>", "/", { desc = "Search (like .vimrc)" })
+map("n", "Q", "<Nop>", { desc = "Macro replay off" })
+-- (Not migrated: the leader Y/X leetcode-copy helpers -- niche.)
